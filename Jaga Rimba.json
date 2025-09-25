@@ -586,6 +586,78 @@
         "name": "pagaerkiri.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "pagarkanan.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pagarkanan.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "affaf.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "affaf.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Group 2063.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Group 2063.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "a.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "a.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "b.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "b.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "c.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "c.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "d.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "d.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Group 3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Group 3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "pagar 4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pagar 4.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2483,11 +2555,17 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.39251611754882315,
+        "zoomFactor": 0.4057518905943868,
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "var",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -2530,8 +2608,8 @@
           "name": "marcus",
           "persistentUuid": "d28a0a96-d4d4-4ec9-b558-6ec466559c69",
           "width": 0,
-          "x": 581,
-          "y": 131,
+          "x": 546,
+          "y": 375,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -2546,9 +2624,305 @@
           "name": "pagar",
           "persistentUuid": "e0cdabdc-1b00-49c8-8a96-b307ca838b4f",
           "width": 0,
-          "x": -1253,
-          "y": -286,
+          "x": -1267,
+          "y": -304,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1039,
+          "layer": "",
+          "name": "pagerkanan",
+          "persistentUuid": "ae89af46-8f99-4334-a51e-520ebe98baf6",
+          "width": 1460,
+          "x": 1138,
+          "y": -286,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "parislurus",
+          "persistentUuid": "f0abdd64-cc5a-4664-b515-73b6c89880e1",
+          "width": 0,
+          "x": -1367,
+          "y": -1065,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "parislurus",
+          "persistentUuid": "d206a3b2-b9cb-4afd-b334-90406b85183e",
+          "width": 0,
+          "x": 1158,
+          "y": -1063,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite4",
+          "persistentUuid": "dfa93bde-b79a-4c1e-b4f4-128f459e64dc",
+          "width": 0,
+          "x": -1444,
+          "y": -979,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite5",
+          "persistentUuid": "94535a25-505a-413b-8a3d-93d79e0f269c",
+          "width": 0,
+          "x": -1251,
+          "y": 717,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 104,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite6",
+          "persistentUuid": "a4bd7d9d-b389-4588-b4ed-58d33c5f8d3e",
+          "width": 374,
+          "x": 932,
+          "y": 650,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 104,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite6",
+          "persistentUuid": "4940ffe6-f98b-4c84-a895-4a903416b88e",
+          "width": 374,
+          "x": 101,
+          "y": 645,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 104,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite6",
+          "persistentUuid": "e0c491db-f93f-4de9-9e58-918a7aa45693",
+          "width": 374,
+          "x": 447,
+          "y": 645,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 104,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite6",
+          "persistentUuid": "6236b2ac-a295-4ac4-8b93-15c953c74629",
+          "width": 374,
+          "x": 798,
+          "y": 642,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pger",
+          "persistentUuid": "65a954da-9720-4b1f-897e-f59cee38d574",
+          "width": 0,
+          "x": -78,
+          "y": 717,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pger",
+          "persistentUuid": "70a4f767-5b92-40cf-956f-a945fa02b5ef",
+          "width": 0,
+          "x": 1163,
+          "y": 723,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 104,
+          "layer": "",
+          "name": "rumput2",
+          "persistentUuid": "f89b4e27-bc0a-404b-a771-b52003a4efc2",
+          "width": 374,
+          "x": 945,
+          "y": -710,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 104,
+          "layer": "",
+          "name": "rumput2",
+          "persistentUuid": "a73e6e72-b705-4726-a95f-4e91205ad542",
+          "width": 374,
+          "x": 62,
+          "y": -707,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 104,
+          "layer": "",
+          "name": "rumput2",
+          "persistentUuid": "6e0d2708-97ba-44f7-8b82-e22ff8050ddf",
+          "width": 374,
+          "x": 407,
+          "y": -711,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 104,
+          "layer": "",
+          "name": "rumput2",
+          "persistentUuid": "0cbc06d4-eb37-45c3-99e2-a9a545ec2838",
+          "width": 374,
+          "x": 705,
+          "y": -711,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 91,
+          "customSize": true,
+          "depth": 1,
+          "flippedX": true,
+          "flippedY": true,
+          "height": 104,
+          "layer": "",
+          "name": "rumput3",
+          "persistentUuid": "51e7c981-d256-4b05-bb43-e48aa3345e93",
+          "width": 374,
+          "x": 1132,
+          "y": -335,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewExternalTileMap",
+          "persistentUuid": "62d9a197-60aa-4309-a21f-7f7a9e0d8565",
+          "width": 0,
+          "x": 1550,
+          "y": -2070,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 91,
+          "customSize": true,
+          "depth": 1,
+          "flippedX": true,
+          "flippedY": true,
+          "height": 104,
+          "layer": "",
+          "name": "rumput3",
+          "persistentUuid": "b9e121ea-be48-4830-8193-b83d9e34f6ef",
+          "width": 374,
+          "x": 1135,
+          "y": -567,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2750,10 +3124,10 @@
               "IsCalledManually": false
             },
             {
+              "allowDiagonals": false,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 400,
-              "allowDiagonals": true,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
@@ -2775,6 +3149,90 @@
             }
           ],
           "animations": [
+            {
+              "name": "idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "diem belakang1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 181
+                          },
+                          {
+                            "x": 45,
+                            "y": 181
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "diem belakang2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 181
+                          },
+                          {
+                            "x": 45,
+                            "y": 181
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "name": "lari",
               "useMultipleDirections": false,
@@ -2932,90 +3390,6 @@
               ]
             },
             {
-              "name": "idle",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.14,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "diem belakang1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 45,
-                            "y": 49
-                          },
-                          {
-                            "x": 135,
-                            "y": 49
-                          },
-                          {
-                            "x": 135,
-                            "y": 181
-                          },
-                          {
-                            "x": 45,
-                            "y": 181
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "diem belakang2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 45,
-                            "y": 49
-                          },
-                          {
-                            "x": 135,
-                            "y": 49
-                          },
-                          {
-                            "x": 135,
-                            "y": 181
-                          },
-                          {
-                            "x": 45,
-                            "y": 181
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "name": "run left",
               "useMultipleDirections": false,
               "directions": [
@@ -3110,6 +3484,162 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "idle kiri2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 181
+                          },
+                          {
+                            "x": 45,
+                            "y": 181
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "larikebawah",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "a.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 181
+                          },
+                          {
+                            "x": 45,
+                            "y": 181
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "b.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 181
+                          },
+                          {
+                            "x": 45,
+                            "y": 181
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "c.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 49
+                          },
+                          {
+                            "x": 135,
+                            "y": 181
+                          },
+                          {
+                            "x": 45,
+                            "y": 181
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "d.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3285,6 +3815,538 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "pagerkanan",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pagarkanan.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 153,
+                            "y": 41
+                          },
+                          {
+                            "x": 1500,
+                            "y": 41
+                          },
+                          {
+                            "x": 1500,
+                            "y": 996
+                          },
+                          {
+                            "x": 153,
+                            "y": 996
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "parislurus",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "affaf.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 137,
+                            "y": 272
+                          },
+                          {
+                            "x": 1444,
+                            "y": 272
+                          },
+                          {
+                            "x": 1444,
+                            "y": 406.5
+                          },
+                          {
+                            "x": 139.5,
+                            "y": 406.5
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "NewSprite4",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Group 2063.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 59
+                          },
+                          {
+                            "x": 418.5,
+                            "y": 196
+                          },
+                          {
+                            "x": 383,
+                            "y": 428
+                          },
+                          {
+                            "x": 392.5,
+                            "y": 683.5
+                          },
+                          {
+                            "x": 401.5,
+                            "y": 783.5
+                          },
+                          {
+                            "x": 448,
+                            "y": 919
+                          },
+                          {
+                            "x": 0,
+                            "y": 962
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite5",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "map 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 0
+                          },
+                          {
+                            "x": 3849,
+                            "y": 0
+                          },
+                          {
+                            "x": 3849,
+                            "y": 2164
+                          },
+                          {
+                            "x": 4,
+                            "y": 2164
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite6",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Group 3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 4
+                          },
+                          {
+                            "x": 266,
+                            "y": 4
+                          },
+                          {
+                            "x": 266,
+                            "y": 62
+                          },
+                          {
+                            "x": 4,
+                            "y": 62
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "pger",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pagar 4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 124,
+                            "y": 0
+                          },
+                          {
+                            "x": 190,
+                            "y": 0
+                          },
+                          {
+                            "x": 190,
+                            "y": 723
+                          },
+                          {
+                            "x": 124,
+                            "y": 723
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "rumput2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Group 3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 4
+                          },
+                          {
+                            "x": 266,
+                            "y": 4
+                          },
+                          {
+                            "x": 266,
+                            "y": 62
+                          },
+                          {
+                            "x": 4,
+                            "y": 62
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "rumput3",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Group 3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 4
+                          },
+                          {
+                            "x": 266,
+                            "y": 4
+                          },
+                          {
+                            "x": 266,
+                            "y": 62
+                          },
+                          {
+                            "x": 4,
+                            "y": 62
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -3297,6 +4359,21 @@
             "objectName": "NewSprite2"
           },
           {
+            "objectName": "rumput3"
+          },
+          {
+            "objectName": "pger"
+          },
+          {
+            "objectName": "NewSprite5"
+          },
+          {
+            "objectName": "NewSprite6"
+          },
+          {
+            "objectName": "rumput2"
+          },
+          {
             "objectName": "marcus"
           },
           {
@@ -3304,6 +4381,15 @@
           },
           {
             "objectName": "pagar"
+          },
+          {
+            "objectName": "pagerkanan"
+          },
+          {
+            "objectName": "parislurus"
+          },
+          {
+            "objectName": "NewSprite4"
           }
         ]
       },
@@ -3324,6 +4410,97 @@
                 "900",
                 "\"linear\"",
                 "1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "marcus",
+                "pagar",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "marcus",
+                "pagerkanan",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "marcus",
+                "parislurus",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "marcus",
+                "NewSprite6",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "marcus",
+                "NewSprite4",
                 ""
               ]
             }
@@ -3362,6 +4539,16 @@
                 "=",
                 "\"lari\""
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "var",
+                "=",
+                "1"
+              ]
             }
           ]
         },
@@ -3398,24 +4585,145 @@
                 "marcus",
                 "TopDownMovement"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "var",
+                "=",
+                "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"s\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "marcus",
+                "Animation",
+                "=",
+                "\"larikebawah\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TopDownMovementBehavior::SimulateDownKey"
+              },
+              "parameters": [
+                "marcus",
+                "TopDownMovement"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "var",
+                "=",
+                "3"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "TopDownMovementBehavior::IsMoving"
+              },
+              "parameters": [
+                "marcus",
+                "TopDownMovement"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "var",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "marcus",
+                "Animation",
+                "=",
+                "\"idle\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "TopDownMovementBehavior::IsMoving"
+              },
+              "parameters": [
+                "marcus",
+                "TopDownMovement"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "var",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "marcus",
+                "Animation",
+                "=",
+                "\"idle left\""
+              ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "marcus",
-                "pagar",
-                ""
-              ]
-            }
-          ]
+          "actions": []
         }
       ],
       "layers": [
