@@ -566,7 +566,7 @@
       {
         "file": "idle kiri2.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"idle kiri2.png\",\"extension\":\".png\"}",
         "name": "idle kiri2.png",
         "smoothed": true,
         "userAdded": false
@@ -742,7 +742,7 @@
       {
         "file": "idle kiri1.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"idle kiri1.png\",\"extension\":\".png\"}",
         "name": "idle kiri1.png",
         "smoothed": true,
         "userAdded": false
@@ -913,39 +913,109 @@
         "name": "MONYETBIASA.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "jaga rimba jatuh 1.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"jaga rimba jatuh 1.png\",\"extension\":\".png\"}",
+        "name": "jaga rimba jatuh 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite6",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Rectangle 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Rectangle 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "ULANGI.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ULANGI.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "BACK.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BACK.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "jaga rimba jatuh 2.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"jaga rimba jatuh 2.png\",\"extension\":\".png\"}",
+        "name": "jaga rimba jatuh 2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "jaga rimba jatuh 3.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"jaga rimba jatuh 3.png\",\"extension\":\".png\"}",
+        "name": "jaga rimba jatuh 3.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
   },
   "objects": [
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "marcus",
+      "name": "bolang",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
       "behaviors": [
         {
-          "acceleration": 1500,
-          "canGoDownFromJumpthru": true,
-          "canGrabPlatforms": false,
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+          "EnableAnimationChanges": true,
+          "EnableHorizontalFlipping": true,
+          "IdleAnimationName": "diemkanan",
+          "RunAnimationName": "larikanan",
+          "JumpAnimationName": "jump",
+          "FallAnimationName": "Fall",
+          "ClimbAnimationName": "Climb",
+          "PlatformerBehavior": "PlatformerObject",
+          "Animation": "Animation",
+          "Flippable": "Flippable"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "acceleration": 1470,
+          "canGoDownFromJumpthru": false,
+          "canGrabPlatforms": true,
           "canGrabWithoutMoving": true,
+          "ignoreDefaultControls": true,
+          "xGrabTolerance": 15,
           "deceleration": 1500,
           "gravity": 1000,
-          "ignoreDefaultControls": false,
           "jumpSpeed": 770,
           "jumpSustainTime": 0.2,
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 700,
           "maxSpeed": 250,
-          "name": "PlatformerObject",
           "slopeMaxAngle": 60,
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "useLegacyTrajectory": false,
           "useRepeatedJump": false,
-          "xGrabTolerance": 10,
           "yGrabOffset": 0
         },
         {
@@ -1023,6 +1093,10 @@
           "ControllerIdentifier": 1,
           "JoystickIdentifier": "Primary",
           "StickMode": "Analog"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ],
       "animations": [
@@ -1385,12 +1459,12 @@
                         "y": 45
                       },
                       {
-                        "x": 135,
-                        "y": 180
+                        "x": 136,
+                        "y": 183.5
                       },
                       {
-                        "x": 45,
-                        "y": 180
+                        "x": 46,
+                        "y": 184.5
                       }
                     ]
                   ]
@@ -1441,6 +1515,7 @@
           "directions": [
             {
               "looping": true,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.21,
               "sprites": [
                 {
@@ -1920,7 +1995,7 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "timeBetweenFrames": 0.21,
               "sprites": [
                 {
@@ -2082,6 +2157,127 @@
               ]
             }
           ]
+        },
+        {
+          "name": "JATUH",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.14,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "jaga rimba jatuh 1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 45,
+                        "y": 45
+                      },
+                      {
+                        "x": 135,
+                        "y": 45
+                      },
+                      {
+                        "x": 135,
+                        "y": 180
+                      },
+                      {
+                        "x": 45,
+                        "y": 180
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "jaga rimba jatuh 2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 45,
+                        "y": 45
+                      },
+                      {
+                        "x": 135,
+                        "y": 45
+                      },
+                      {
+                        "x": 135,
+                        "y": 180
+                      },
+                      {
+                        "x": 45,
+                        "y": 180
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "jaga rimba jatuh 3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 45,
+                        "y": 45
+                      },
+                      {
+                        "x": 135,
+                        "y": 45
+                      },
+                      {
+                        "x": 135,
+                        "y": 180
+                      },
+                      {
+                        "x": 45,
+                        "y": 180
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -2090,7 +2286,7 @@
     "folderName": "__ROOT",
     "children": [
       {
-        "objectName": "marcus"
+        "objectName": "bolang"
       }
     ]
   },
@@ -2110,6 +2306,16 @@
       "name": "point",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "targetType",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "collect",
+      "type": "array",
+      "children": []
     }
   ],
   "layouts": [
@@ -3433,6 +3639,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator"
+        },
+        {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
@@ -3982,6 +4192,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator"
+        },
+        {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
@@ -4031,7 +4245,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3216911764705931,
+        "zoomFactor": 0.16572117247527063,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -7434,7 +7648,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "pagar",
                     ""
                   ]
@@ -7450,7 +7664,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "pagerkanan",
                     ""
                   ]
@@ -7466,7 +7680,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "parislurus",
                     ""
                   ]
@@ -7482,7 +7696,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "NewSprite6",
                     ""
                   ]
@@ -7498,7 +7712,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "NewSprite4",
                     ""
                   ]
@@ -7514,7 +7728,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "PATUNG",
                     ""
                   ]
@@ -7530,7 +7744,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "rumput2",
                     ""
                   ]
@@ -7546,7 +7760,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "rumput3",
                     ""
                   ]
@@ -7562,7 +7776,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "marcus2",
                     "TEMPAT",
                     ""
                   ]
@@ -7811,6 +8025,10 @@
           "type": "PlatformBehavior::PlatformBehavior"
         },
         {
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator"
+        },
+        {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
@@ -7860,7 +8078,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.35534345588170024,
+        "zoomFactor": 0.4789341884535285,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7869,14 +8087,32 @@
           "objects": [
             {
               "name": "buah"
-            },
-            {
-              "name": "_2"
             }
           ]
         }
       ],
-      "variables": [],
+      "variables": [
+        {
+          "name": "countpisang",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "countdaging",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "randtype",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "child",
+          "type": "string",
+          "value": "0"
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -7929,15 +8165,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 38,
           "keepRatio": true,
           "layer": "",
           "name": "ranting1",
           "persistentUuid": "f99767d4-e3f5-40a0-ba3e-a3ffb5dd8dd3",
-          "width": 0,
-          "x": 569,
-          "y": 422,
+          "width": 315,
+          "x": 572,
+          "y": 431,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -7970,40 +8207,8 @@
           "persistentUuid": "e998c072-8b93-4894-91e4-28972e592fb1",
           "width": 0,
           "x": 1050,
-          "y": 133,
+          "y": 154,
           "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite2",
-          "persistentUuid": "5e83174b-0e85-4025-8944-a85908367c6d",
-          "width": 0,
-          "x": 900,
-          "y": 278,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite2",
-          "persistentUuid": "83cfc0bf-61f0-4056-926d-269bfc732a88",
-          "width": 0,
-          "x": 1105,
-          "y": 436,
-          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8098,23 +8303,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ranting1",
-          "persistentUuid": "3908adc9-6c30-43e1-955b-84b30262336c",
-          "width": 0,
-          "x": 2243,
-          "y": 211,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "flippedX": true,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
           "name": "rantimg2",
           "persistentUuid": "3a8c76e2-2199-46af-a18b-1a8e058a1c22",
           "width": 0,
@@ -8134,8 +8322,8 @@
           "name": "ranting1",
           "persistentUuid": "73c14be9-42d2-4d19-a681-8e1b16ca23d3",
           "width": 0,
-          "x": 2751,
-          "y": 346,
+          "x": 2753,
+          "y": 211,
           "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
@@ -8170,86 +8358,6 @@
           "x": 3277,
           "y": 206,
           "zOrder": 24,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite2",
-          "persistentUuid": "6201af2a-a98a-4d09-84de-f50833c0a0cb",
-          "width": 0,
-          "x": 1515,
-          "y": 296,
-          "zOrder": 25,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite2",
-          "persistentUuid": "57242b16-6d92-48ec-82f6-841ccb1cd630",
-          "width": 0,
-          "x": 1973,
-          "y": 402,
-          "zOrder": 26,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite2",
-          "persistentUuid": "6cfcb382-d9c9-4d72-b6ff-9b676d262201",
-          "width": 0,
-          "x": 2526,
-          "y": 350,
-          "zOrder": 27,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ranting1",
-          "persistentUuid": "1338b347-20d5-41eb-8ed0-821b916449c8",
-          "width": 0,
-          "x": 1937,
-          "y": 236,
-          "zOrder": 28,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite2",
-          "persistentUuid": "ddeee44a-eec0-4668-b65c-f4b88b6657a7",
-          "width": 0,
-          "x": 2803,
-          "y": 284,
-          "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8395,7 +8503,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "marcus",
+          "name": "bolang",
           "persistentUuid": "c77e4827-ee0c-4775-85d3-aeac45485b1f",
           "width": 0,
           "x": 150,
@@ -8434,6 +8542,332 @@
           "x": 3475,
           "y": 200,
           "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1324,
+          "keepRatio": true,
+          "layer": "LOSE",
+          "name": "nangis_kalah",
+          "persistentUuid": "dd440b71-7d78-4b98-aff9-413bc51c175f",
+          "width": 887,
+          "x": -195,
+          "y": -213,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "LOSE",
+          "name": "gagal",
+          "persistentUuid": "218959d2-bbee-4231-9bc6-b5be29d91c7a",
+          "width": 0,
+          "x": 608,
+          "y": 156,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 113,
+          "keepRatio": true,
+          "layer": "LOSE",
+          "name": "nuahpisang_kalah",
+          "persistentUuid": "c19d0f79-680e-4d9f-9eb4-06549e8c06aa",
+          "width": 148,
+          "x": 794,
+          "y": 349,
+          "zOrder": 37,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "layer": "LOSE",
+          "name": "kalahhitam",
+          "opacity": 179,
+          "persistentUuid": "f8558c7a-ef2f-4491-90a5-7e2c2b60442e",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "LOSE",
+          "name": "ulangi",
+          "persistentUuid": "1a199687-e1c2-4623-a1dc-3b30254b8875",
+          "width": 0,
+          "x": 505,
+          "y": 636,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "LOSE",
+          "name": "back",
+          "persistentUuid": "f4728efb-78a3-421f-99c7-2ff8f80c0630",
+          "width": 0,
+          "x": 982,
+          "y": 633,
+          "zOrder": 39,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1324,
+          "keepRatio": true,
+          "layer": "losekenarumput",
+          "name": "nangis_kalah",
+          "persistentUuid": "3d4460bb-872f-4c55-93d2-6e8be680463d",
+          "width": 887,
+          "x": -207,
+          "y": -161,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "losekenarumput",
+          "name": "ulangi",
+          "persistentUuid": "7ec62534-2584-4a44-9aba-47d59216b66b",
+          "width": 0,
+          "x": 515,
+          "y": 646,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "losekenarumput",
+          "name": "back",
+          "persistentUuid": "6cb96160-4180-4bb2-ac56-4ae4767f7e81",
+          "width": 0,
+          "x": 992,
+          "y": 643,
+          "zOrder": 39,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "losekenarumput",
+          "name": "gagal",
+          "persistentUuid": "ee662961-48e3-4bd2-95cb-c156964db4e0",
+          "width": 0,
+          "x": 608,
+          "y": 156,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 720,
+          "layer": "losekenarumput",
+          "name": "kalahhitam",
+          "opacity": 179,
+          "persistentUuid": "656950e4-90ae-4d14-91e6-783d267c75cf",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "rantimg2",
+          "persistentUuid": "00baa68e-7f07-4bd2-acfc-0dcaff2b9a06",
+          "width": 0,
+          "x": 1947,
+          "y": 263,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "rantimg2",
+          "persistentUuid": "11ba7964-198d-45d7-9165-c5a44b87bbac",
+          "width": 0,
+          "x": 2765,
+          "y": 516,
+          "zOrder": 45,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "flippedX": true,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "4662f1d3-fd53-44c0-acc2-500c277579a4",
+          "width": 0,
+          "x": 2242,
+          "y": 222,
+          "zOrder": 46,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "8bf221ba-f52c-4849-a54f-7c0bfcc6a9ed",
+          "width": 0,
+          "x": 2813,
+          "y": 459,
+          "zOrder": 47,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "016ffd71-3af4-42bc-9490-6c10d5b7831f",
+          "width": 0,
+          "x": 2539,
+          "y": 353,
+          "zOrder": 48,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "ea64b48d-9bcd-4920-9106-f1e3e38b4da3",
+          "width": 0,
+          "x": 1973,
+          "y": 401,
+          "zOrder": 49,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "e3b57115-bbd8-4876-b140-8c663af27480",
+          "width": 0,
+          "x": 1526,
+          "y": 298,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "4aeddb57-cdf5-4665-92f4-553926b5ffa8",
+          "width": 0,
+          "x": 947,
+          "y": 273,
+          "zOrder": 51,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "9d126ac0-24af-477f-a6e6-9f55410f42fa",
+          "width": 0,
+          "x": 1108,
+          "y": 438,
+          "zOrder": 52,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8640,8 +9074,8 @@
             {
               "name": "Platform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
               "platformType": "Jumpthru",
-              "canBeGrabbed": true,
               "yGrabOffset": 0
             }
           ],
@@ -8672,16 +9106,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 16,
-                            "y": 6
+                            "x": 16.5,
+                            "y": 11.5
                           },
                           {
-                            "x": 140,
-                            "y": 12
+                            "x": 153,
+                            "y": 11
                           },
                           {
-                            "x": 140,
-                            "y": 18
+                            "x": 169.5,
+                            "y": 21
+                          },
+                          {
+                            "x": 160.5,
+                            "y": 37
                           },
                           {
                             "x": 16,
@@ -8708,9 +9146,9 @@
             {
               "name": "Platform",
               "type": "PlatformBehavior::PlatformBehavior",
-              "platformType": "Jumpthru",
-              "canBeGrabbed": true,
-              "yGrabOffset": 0
+              "canBeGrabbed": false,
+              "yGrabOffset": 0,
+              "platformType": "Jumpthru"
             }
           ],
           "animations": [
@@ -8740,20 +9178,24 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 14,
-                            "y": 7
+                            "x": 16,
+                            "y": 12
                           },
                           {
-                            "x": 203,
-                            "y": 11.5
+                            "x": 236.5,
+                            "y": 9
                           },
                           {
-                            "x": 194,
-                            "y": 19
+                            "x": 237.5,
+                            "y": 19.5
                           },
                           {
-                            "x": 14,
+                            "x": 234,
                             "y": 38
+                          },
+                          {
+                            "x": 14.5,
+                            "y": 37
                           }
                         ]
                       ]
@@ -8776,8 +9218,8 @@
             {
               "name": "Platform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
               "platformType": "Jumpthru",
-              "canBeGrabbed": true,
               "yGrabOffset": 0
             }
           ],
@@ -8905,7 +9347,7 @@
           "behaviors": []
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "NewSprite3",
           "type": "Sprite",
@@ -8957,12 +9399,12 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 4,
-                            "y": 4
+                            "x": 6.5,
+                            "y": 24
                           },
                           {
-                            "x": 266,
-                            "y": 4
+                            "x": 260.5,
+                            "y": 27.5
                           },
                           {
                             "x": 266,
@@ -9090,66 +9532,6 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "_2",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "daging_pilih.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 17,
-                            "y": 21
-                          },
-                          {
-                            "x": 70,
-                            "y": 21
-                          },
-                          {
-                            "x": 70,
-                            "y": 65
-                          },
-                          {
-                            "x": 17,
-                            "y": 65
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "assetStoreId": "",
           "bold": false,
           "italic": false,
@@ -9262,6 +9644,520 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "nangis_kalah",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseMovement",
+              "type": "EllipseMovement::EllipseMovement",
+              "RadiusX": 0,
+              "RadiusY": 2,
+              "LoopDuration": 4,
+              "InitialTurningLeft": false,
+              "InitialDirectionAngle": 0,
+              "ShouldRotate": false,
+              "RotationOffset": 0,
+              "CenterX": 0,
+              "CenterY": 0,
+              "MovementAngle": 0,
+              "OldX": 2.0247e-320,
+              "OldY": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jaga rimba jatuh 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 45,
+                            "y": 45
+                          },
+                          {
+                            "x": 140,
+                            "y": 45
+                          },
+                          {
+                            "x": 140,
+                            "y": 176
+                          },
+                          {
+                            "x": 45,
+                            "y": 176
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite5",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "nuahpisang_kalah",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pisang_pilih.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 3
+                          },
+                          {
+                            "x": 57,
+                            "y": 3
+                          },
+                          {
+                            "x": 57,
+                            "y": 59
+                          },
+                          {
+                            "x": 2,
+                            "y": 59
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "gagal",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "GAGAL!!!",
+          "font": "Minecraft.ttf",
+          "textAlignment": "left",
+          "characterSize": 150,
+          "color": {
+            "b": 27,
+            "g": 2,
+            "r": 208
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 7,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "GAGAL!!!",
+            "font": "Minecraft.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 150,
+            "lineHeight": 0,
+            "color": "208;2;27"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "kalahhitam",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite6",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Rectangle 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 720
+                          },
+                          {
+                            "x": 0,
+                            "y": 720
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ulangi",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "ULANGI.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 0
+                          },
+                          {
+                            "x": 249,
+                            "y": 0
+                          },
+                          {
+                            "x": 249,
+                            "y": 61
+                          },
+                          {
+                            "x": 4,
+                            "y": 61
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "back",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "BACK.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 60
+                          },
+                          {
+                            "x": 0,
+                            "y": 60
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "pisang",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "pisang",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pisang_pilih.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 3
+                          },
+                          {
+                            "x": 57,
+                            "y": 3
+                          },
+                          {
+                            "x": 57,
+                            "y": 59
+                          },
+                          {
+                            "x": 2,
+                            "y": 59
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "daging",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "daging",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "daging_pilih.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 17,
+                            "y": 21
+                          },
+                          {
+                            "x": 70,
+                            "y": 21
+                          },
+                          {
+                            "x": 70,
+                            "y": 65
+                          },
+                          {
+                            "x": 17,
+                            "y": 65
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -9301,44 +10197,93 @@
             "objectName": "buah"
           },
           {
+            "objectName": "pisang"
+          },
+          {
+            "objectName": "daging"
+          },
+          {
             "objectName": "nilai"
           },
           {
-            "objectName": "_2"
+            "objectName": "MONYET"
           },
           {
-            "objectName": "MONYET"
+            "objectName": "nangis_kalah"
+          },
+          {
+            "objectName": "NewSprite5"
+          },
+          {
+            "objectName": "nuahpisang_kalah"
+          },
+          {
+            "objectName": "gagal"
+          },
+          {
+            "objectName": "kalahhitam"
+          },
+          {
+            "objectName": "ulangi"
+          },
+          {
+            "objectName": "back"
           }
         ]
       },
       "events": [
         {
-          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "value": "CentreCamera"
+                "value": "TiledSpriteObject::XOffset"
               },
               "parameters": [
-                "",
-                "marcus",
-                "",
-                "",
-                ""
+                "NewTiledSprite2",
+                "+",
+                "2"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
             {
               "type": {
-                "value": "SmoothCamera::SmoothCamera::SetOffsetXOp"
+                "value": "TiledSpriteObject::XOffset"
               },
               "parameters": [
-                "marcus",
-                "SmoothCamera",
-                "=",
-                "600",
-                ""
+                "NewTiledSprite",
+                "+",
+                "2"
               ]
             }
           ]
@@ -9348,11 +10293,13 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "mov marcus",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9371,7 +10318,7 @@
                     "value": "TopDownMovementBehavior::SimulateRightKey"
                   },
                   "parameters": [
-                    "marcus",
+                    "bolang",
                     "TopDownMovement"
                   ]
                 },
@@ -9380,10 +10327,20 @@
                     "value": "AnimatableCapability::AnimatableBehavior::SetName"
                   },
                   "parameters": [
-                    "marcus",
+                    "bolang",
                     "Animation",
                     "=",
                     "\"larikanan\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Flippable",
+                    "no"
                   ]
                 },
                 {
@@ -9410,6 +10367,7 @@
             },
             {
               "disabled": true,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9418,29 +10376,28 @@
                   },
                   "parameters": [
                     "",
-                    "\"s\""
+                    "\"a\""
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
                   },
                   "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"larikebawah\""
+                    "bolang",
+                    "TopDownMovement"
                   ]
                 },
                 {
                   "type": {
-                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
                   },
                   "parameters": [
-                    "marcus",
-                    "TopDownMovement"
+                    "bolang",
+                    "Flippable",
+                    "yes"
                   ]
                 },
                 {
@@ -9450,7 +10407,277 @@
                   "parameters": [
                     "var",
                     "=",
-                    "3"
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "jump",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "bolang",
+                        "Animation",
+                        "=",
+                        "\"run left\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Space\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "jump",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Animation",
+                    "=",
+                    "\"jump\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "var",
+                    "=",
+                    "5"
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Space\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "jump",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Animation",
+                    "=",
+                    "\"jumpleft\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "var",
+                    "=",
+                    "6"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Flippable",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "TopDownMovementBehavior::IsMoving"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "TopDownMovement"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "var",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Animation",
+                    "=",
+                    "\"idle left\""
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "TopDownMovementBehavior::IsMoving"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "TopDownMovement"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "var",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Animation",
+                    "=",
+                    "\"diemkanan\""
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::IsJumping"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "var",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "Animation",
+                    "=",
+                    "\"diemkanan\""
                   ]
                 }
               ]
@@ -9471,42 +10698,38 @@
               "actions": [
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                    "value": "PlatformBehavior::SimulateControl"
                   },
                   "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"run left\""
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Left\""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
-                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                    "value": "KeyFromTextPressed"
                   },
                   "parameters": [
-                    "marcus",
-                    "TopDownMovement"
+                    "",
+                    "\"d\""
                   ]
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
-                    "value": "SetNumberVariable"
+                    "value": "PlatformBehavior::SimulateControl"
                   },
                   "parameters": [
-                    "var",
-                    "=",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "jump",
-                    "=",
-                    "1"
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Right\""
                   ]
                 }
               ]
@@ -9522,304 +10745,17 @@
                     "",
                     "\"Space\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "jump",
-                    "=",
-                    "2"
-                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                    "value": "PlatformBehavior::SimulateControl"
                   },
                   "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"jump\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::SimulateJumpKey"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "PlatformerObject"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Space\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "jump",
-                    "=",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"jumpleft\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlatformBehavior::SimulateJumpKey"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "PlatformerObject"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "6"
-                  ]
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"w\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TopDownMovementBehavior::SimulateUpKey"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "TopDownMovement"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"lari\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TopDownMovementBehavior::IsMoving"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "TopDownMovement"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "5"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "marcus2",
-                    "Animation",
-                    "=",
-                    "\"diemkanan\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TopDownMovementBehavior::IsMoving"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "TopDownMovement"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"idle left\""
-                  ]
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TopDownMovementBehavior::IsMoving"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "TopDownMovement"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "3"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "marcus2",
-                    "Animation",
-                    "=",
-                    "\"diembawah\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TopDownMovementBehavior::IsMoving"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "TopDownMovement"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "var",
-                    "=",
-                    "4"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "marcus",
-                    "Animation",
-                    "=",
-                    "\"diemkanan\""
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Jump\""
                   ]
                 }
               ]
@@ -9833,7 +10769,7 @@
                     "value": "SeparateFromObjects"
                   },
                   "parameters": [
-                    "marcus",
+                    "bolang",
                     "NewSprite4",
                     ""
                   ]
@@ -9865,39 +10801,6 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TiledSpriteObject::XOffset"
-              },
-              "parameters": [
-                "NewTiledSprite",
-                "+",
-                "2"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TiledSpriteObject::XOffset"
-              },
-              "parameters": [
-                "NewTiledSprite2",
-                "+",
-                "2"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "NewSprite2",
           "conditions": [
             {
               "type": {
@@ -9908,76 +10811,447 @@
               ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "buah",
-                "NewSprite2.X()",
-                "NewSprite2.Y()",
-                ""
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "NewSprite2",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "SceneInstancesCount(buah)",
+                    "buah"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "buah",
+                    "NewSprite2.X()",
+                    "NewSprite2.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "buah",
+                    "Animation",
+                    "=",
+                    "ToString(RandomInRange(0, 1))"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "3",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "buah",
+                            "buah",
+                            "<",
+                            "3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Animation",
+                            "=",
+                            "\"0\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Animation",
+                            "=",
+                            "\"0\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "buah",
+                            "buah",
+                            "<",
+                            "3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Animation",
+                            "=",
+                            "\"1\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Animation",
+                            "=",
+                            "\"1\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "NewSprite2",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "buah",
-                "Animation",
-                "=",
-                "ToString(RandomInRange(0, 1))"
+              "disabled": true,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "NewSprite2",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "randtype",
+                    "=",
+                    "RandomInRange(0,1)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "randtype",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "countpisang",
+                            "<",
+                            "4"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "pisang",
+                        "NewSprite2.X()",
+                        "NewSprite2.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "countpisang",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "NewSprite2",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "countdaging",
+                                ">=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "countpisang",
+                                "<",
+                                "4"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "pisang",
+                            "NewSprite2.X()",
+                            "NewSprite2.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "countpisang",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "NewSprite2",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "randtype",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "countdaging",
+                            "<",
+                            "4"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "daging",
+                        "NewSprite2.X()",
+                        "NewSprite2.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "countdaging",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "NewSprite2",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "countpisang",
+                                ">=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "countdaging",
+                                "<",
+                                "4"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "daging",
+                            "NewSprite2.X()",
+                            "NewSprite2.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "countdaging",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "NewSprite2",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "NewSprite2",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "marcus",
-                "buah",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "point",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "buah",
-                ""
-              ]
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ]
         },
@@ -9994,6 +11268,382 @@
                 "Text",
                 "=",
                 "point+\"/3\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "bolang",
+                "NewSprite3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "bolang",
+                "Tween",
+                "\"JATUH\"",
+                "bolang.X()",
+                "bolang.Y()+900",
+                "\"bounce\"",
+                "1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "bolang",
+                "Animation",
+                "=",
+                "\"JATUH\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::Exists"
+              },
+              "parameters": [
+                "bolang",
+                "Tween",
+                "\"JATUH\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"losekenarumput\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "bolang",
+                "buah",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "buah",
+                "Animation",
+                "=",
+                "\"0\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "buah",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "point",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "collect",
+                "\"pisang\""
+              ]
+            },
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"collect\"",
+                "\"info\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "bolang",
+                "buah",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "buah",
+                "Animation",
+                "=",
+                "\"1\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "buah",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "point",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "collect",
+                "\"daging\""
+              ]
+            },
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"collect\"",
+                "\"info\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "bolang",
+                "buah",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "buah",
+                "Animation",
+                "=",
+                "\"0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "StringVariable"
+              },
+              "parameters": [
+                "collect",
+                "!=",
+                "\"pisang\""
+              ]
+            }
+          ],
+          "actions": []
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "bolang",
+                "buah",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "buah",
+                "Animation",
+                "=",
+                "\"1\""
+              ]
+            },
+            {
+              "type": {
+                "value": "StringVariable"
+              },
+              "parameters": [
+                "collect",
+                "!=",
+                "\"daging\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"LOSE\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "ulangi",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"level1\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEachChildVariable",
+          "iterableVariableName": "collect",
+          "valueIteratorVariableName": "child",
+          "keyIteratorVariableName": "",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "point",
+                ">",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"losekenarumput\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "0"
               ]
             }
           ]
@@ -10116,12 +11766,122 @@
               }
             }
           ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "LOSE",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "losekenarumput",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
         {
           "name": "Animation",
           "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM"
         },
         {
           "name": "Effect",
@@ -10142,6 +11902,10 @@
         {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator"
         },
         {
           "name": "PlatformerObject",
@@ -10170,6 +11934,10 @@
         {
           "name": "TopDownMultitouchMapper",
           "type": "SpriteMultitouchJoystick::TopDownMultitouchMapper"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     }
@@ -40800,6 +42568,1354 @@
               ],
               "choices": [],
               "name": "PlatformerCharacter"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "Movement",
+      "extensionNamespace": "",
+      "fullName": "Platformer character animator",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggZD0iTTIzLDExYzIuMiwwLDQtMS44LDQtNHMtMS44LTQtNC00cy00LDEuOC00LDRTMjAuOCwxMSwyMywxMXoiLz4NCgk8cGF0aCBkPSJNMzAuOCwxMi40Yy0wLjMtMC40LTEtMC41LTEuNC0wLjJsLTIuOSwyLjNjLTAuOCwwLjctMiwwLjYtMi43LTAuMmwtNy45LTcuOWMtMS42LTEuNi00LjEtMS42LTUuNywwTDcuMyw5LjMNCgkJYy0wLjQsMC40LTAuNCwxLDAsMS40czEsMC40LDEuNCwwbDIuOC0yLjhjMC44LTAuOCwyLjEtMC44LDIuOSwwbDEuNiwxLjZMMTEuNiwxNGMtMSwxLTEuNCwyLjMtMS4xLDMuN2MwLjIsMS4xLDAuOSwyLDEuOCwyLjYNCgkJbC0xLjYsMS42Yy0wLjQsMC40LTEsMC40LTEuNCwwbC0zLjYtMy42Yy0wLjQtMC40LTEtMC40LTEuNCwwcy0wLjQsMSwwLDEuNGwzLjYsMy42YzAuNiwwLjYsMS4zLDAuOSwyLjEsMC45czEuNi0wLjMsMi4xLTAuOQ0KCQlsMi4xLTIuMWwyLjUsMWMwLjcsMC4zLDEuMiwxLDEuMiwxLjh2NmMwLDAuNiwwLjQsMSwxLDFzMS0wLjQsMS0xdi02YzAtMS42LTEtMy4xLTIuNS0zLjdsLTEuNy0wLjdsNS4yLTUuMmwxLjQsMS40DQoJCWMwLjgsMC44LDEuOCwxLjIsMi45LDEuMmMwLjksMCwxLjgtMC4zLDIuNS0wLjlsMi45LTIuM0MzMS4xLDEzLjQsMzEuMSwxMi44LDMwLjgsMTIuNHoiLz4NCjwvZz4NCjwvc3ZnPg0K",
+      "name": "PlatformerCharacterAnimator",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/Sports and Fitness/Sports and Fitness_training_running_run.svg",
+      "shortDescription": "Change animations and horizontal flipping of a platformer character automatically.",
+      "version": "1.2.0",
+      "description": [
+        "Automatically change the animations and horizontal flipping of an object having the 2D platformer character behavior based on movement and interaction with platform objects.",
+        "",
+        "The platformer example uses this extension ([open the project online](https://editor.gdevelop.io/?project=example://platformer))."
+      ],
+      "origin": {
+        "identifier": "PlatformerCharacterAnimator",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "animation",
+        "platformer",
+        "platform",
+        "flip"
+      ],
+      "authorIds": [
+        "gqDaZjCfevOOxBYkK6zlhtZnXCg1"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Change animations and horizontal flipping of a platformer character automatically.",
+          "fullName": "Platformer character animator",
+          "name": "PlatformerCharacterAnimator",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Flip character based on input from controls",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableHorizontalFlipping",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flippable",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flippable",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Change animations",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableAnimationChanges",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsJumping"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "JumpAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsFalling"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "FallAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnFloor"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "RunAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "IdleAnimationName"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "ClimbAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Flip character based on input from controls",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableHorizontalFlipping",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flip",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Right\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior",
+                                "\"Left\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FlippableCapability::FlippableBehavior::FlipX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Flip",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Change animations",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "EnableAnimationChanges",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsJumping"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "JumpAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsFalling"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation",
+                                "=",
+                                "FallAnimationName"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnFloor"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "RunAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "IdleAnimationName"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation",
+                                    "=",
+                                    "ClimbAnimationName"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PlatformerBehavior"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Animation"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "PlatformBehavior::IsOnLadder"
+                              },
+                              "parameters": [
+                                "Object",
+                                "PlatformerBehavior"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Animation"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Enable (or disable) automated animation changes a platformer character. Disabling animation changes is useful to play custom animations.",
+              "fullName": "Enable (or disable) automated animation changes",
+              "functionType": "Action",
+              "name": "EnableChangingAnimations",
+              "sentence": "Enable automated animation changes on _PARAM0_: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableAnimationChanges",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableAnimationChanges",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "Change animations automatically",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Enable (or disable) automated horizontal flipping of a platform character.",
+              "fullName": "Enable (or disable) automated horizontal flipping",
+              "functionType": "Action",
+              "name": "EnableHorizontalFlipping",
+              "sentence": "Enable automated horizontal flipping on _PARAM0_: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableHorizontalFlipping",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "EnableHorizontalFlipping",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "Enable horizontal flipping",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Idle\" animation name. Do not use quotation marks.",
+              "fullName": "\"Idle\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetIdleAnimationName",
+              "sentence": "Set \"Idle\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "IdleAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Move\" animation name. Do not use quotation marks.",
+              "fullName": "\"Move\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetMoveAnimationName",
+              "sentence": "Set \"Move\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "RunAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Jump\" animation name. Do not use quotation marks.",
+              "fullName": "\"Jump\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetJumpAnimationName",
+              "sentence": "Set \"Jump\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "JumpAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Fall\" animation name. Do not use quotation marks.",
+              "fullName": "\"Fall\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetFallAnimationName",
+              "sentence": "Set \"Fall\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "FallAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set the \"Climb\" animation name. Do not use quotation marks.",
+              "fullName": "\"Climb\" animation name",
+              "functionType": "Action",
+              "group": "Configure animations",
+              "name": "SetClimbAnimationName",
+              "sentence": "Set \"Climb\" animation of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "ClimbAnimationName",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PlatformerCharacterAnimator::PlatformerCharacterAnimator",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Animation name",
+                  "name": "Value",
+                  "type": "string"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Enable animation changes",
+              "name": "EnableAnimationChanges"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Enable horizontal flipping",
+              "name": "EnableHorizontalFlipping"
+            },
+            {
+              "value": "Idle",
+              "type": "String",
+              "label": "\"Idle\" animation name ",
+              "group": "Animation names",
+              "name": "IdleAnimationName"
+            },
+            {
+              "value": "Run",
+              "type": "String",
+              "label": "\"Run\" animation name",
+              "group": "Animation names",
+              "name": "RunAnimationName"
+            },
+            {
+              "value": "Jump",
+              "type": "String",
+              "label": "\"Jump\" animation name",
+              "group": "Animation names",
+              "name": "JumpAnimationName"
+            },
+            {
+              "value": "Fall",
+              "type": "String",
+              "label": "\"Fall\" animation name",
+              "group": "Animation names",
+              "name": "FallAnimationName"
+            },
+            {
+              "value": "Climb",
+              "type": "String",
+              "label": "\"Climb\" animation name",
+              "group": "Animation names",
+              "name": "ClimbAnimationName"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Platformer character",
+              "extraInformation": [
+                "PlatformBehavior::PlatformerObjectBehavior"
+              ],
+              "choices": [],
+              "name": "PlatformerBehavior"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Animatable capacity",
+              "extraInformation": [
+                "AnimatableCapability::AnimatableBehavior"
+              ],
+              "choices": [],
+              "name": "Animation"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Flippable capacity",
+              "extraInformation": [
+                "FlippableCapability::FlippableBehavior"
+              ],
+              "choices": [],
+              "name": "Flippable"
             }
           ],
           "sharedPropertyDescriptors": []
