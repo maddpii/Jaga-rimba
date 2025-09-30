@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 240,
+    "build": 242,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -967,6 +967,62 @@
         "kind": "image",
         "metadata": "{\"localFilePath\":\"jaga rimba jatuh 3.png\",\"extension\":\".png\"}",
         "name": "jaga rimba jatuh 3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite7",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "gir 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gir 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/pause_screen.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/pause_screen.png\"}",
+        "name": "pause_screen",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "sound baru.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "sound baru.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "sound baru 1 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "sound baru 1 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "sound baru 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "sound baru 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "sound baru 3 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "sound baru 3 1.png",
         "smoothed": true,
         "userAdded": false
       }
@@ -2316,6 +2372,16 @@
       "name": "collect",
       "type": "array",
       "children": []
+    },
+    {
+      "name": "Count",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "cek",
+      "type": "string",
+      "value": "0"
     }
   ],
   "layouts": [
@@ -8078,7 +8144,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4789341884535285,
+        "zoomFactor": 0.604083874998892,
         "windowMask": false
       },
       "objectsGroups": [
@@ -8111,6 +8177,21 @@
           "name": "child",
           "type": "string",
           "value": "0"
+        },
+        {
+          "name": "buah2",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "kenamonyet",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "i",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -8871,6 +8952,89 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 622,
+          "keepRatio": true,
+          "layer": "",
+          "name": "targetmonyet",
+          "opacity": 0,
+          "persistentUuid": "b7a5b20d-557d-45de-8dd4-50f2690a4369",
+          "width": 47,
+          "x": 3165,
+          "y": 6,
+          "zOrder": 53,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "ui",
+          "name": "NewSprite6",
+          "persistentUuid": "93d33ddf-9425-4037-bee7-d3b0458c63c5",
+          "width": 0,
+          "x": -3,
+          "y": 2,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 720,
+          "layer": "ui",
+          "name": "pause_screen",
+          "opacity": 179,
+          "persistentUuid": "d1f586b8-f5d9-43d6-8c5f-2fcfb5500289",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "ui",
+          "name": "lagu",
+          "persistentUuid": "b4da5375-c2f8-40b9-b8d6-5353caf55bf3",
+          "width": 0,
+          "x": 47,
+          "y": 50,
+          "zOrder": 42,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "ui",
+          "name": "suara",
+          "persistentUuid": "a71dddfa-e69e-412a-82d1-a306094491b9",
+          "width": 0,
+          "x": 48,
+          "y": 57,
+          "zOrder": 53,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -9424,14 +9588,19 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "buah",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "0",
@@ -9459,20 +9628,48 @@
                       "customCollisionMask": [
                         [
                           {
+                            "x": 6,
+                            "y": 47.5
+                          },
+                          {
+                            "x": 32,
+                            "y": 35
+                          },
+                          {
+                            "x": 39.5,
+                            "y": 20
+                          },
+                          {
+                            "x": 41,
+                            "y": 3.5
+                          },
+                          {
+                            "x": 52.5,
+                            "y": 16
+                          },
+                          {
+                            "x": 55,
+                            "y": 30
+                          },
+                          {
+                            "x": 48,
+                            "y": 42
+                          },
+                          {
+                            "x": 35.5,
+                            "y": 52
+                          },
+                          {
+                            "x": 11,
+                            "y": 57.5
+                          },
+                          {
+                            "x": 2.5,
+                            "y": 55.5
+                          },
+                          {
                             "x": 2,
-                            "y": 3
-                          },
-                          {
-                            "x": 57,
-                            "y": 3
-                          },
-                          {
-                            "x": 57,
-                            "y": 59
-                          },
-                          {
-                            "x": 2,
-                            "y": 59
+                            "y": 51
                           }
                         ]
                       ]
@@ -9507,20 +9704,40 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 2,
-                            "y": 3
+                            "x": 19.5,
+                            "y": 36
                           },
                           {
-                            "x": 57,
-                            "y": 3
+                            "x": 26.5,
+                            "y": 36.5
                           },
                           {
-                            "x": 57,
-                            "y": 59
+                            "x": 41,
+                            "y": 21
                           },
                           {
-                            "x": 2,
-                            "y": 59
+                            "x": 58,
+                            "y": 22
+                          },
+                          {
+                            "x": 70.5,
+                            "y": 31.5
+                          },
+                          {
+                            "x": 70,
+                            "y": 59.5
+                          },
+                          {
+                            "x": 59.5,
+                            "y": 64
+                          },
+                          {
+                            "x": 41.5,
+                            "y": 64
+                          },
+                          {
+                            "x": 18,
+                            "y": 50
                           }
                         ]
                       ]
@@ -10158,6 +10375,445 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "targetmonyet",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite6",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite7",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite6",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "gir 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 36,
+                            "y": 28
+                          },
+                          {
+                            "x": 140,
+                            "y": 28
+                          },
+                          {
+                            "x": 140,
+                            "y": 144
+                          },
+                          {
+                            "x": 36,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "pause_screen",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "pause_screen",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pause_screen",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "lagu",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "sound baru.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 14,
+                            "y": 5
+                          },
+                          {
+                            "x": 59,
+                            "y": 5
+                          },
+                          {
+                            "x": 59,
+                            "y": 68
+                          },
+                          {
+                            "x": 14,
+                            "y": 68
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "sound baru 1 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 14,
+                            "y": 5
+                          },
+                          {
+                            "x": 59,
+                            "y": 5
+                          },
+                          {
+                            "x": 59,
+                            "y": 68
+                          },
+                          {
+                            "x": 14,
+                            "y": 68
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "suara",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "sound baru 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 12,
+                            "y": 12
+                          },
+                          {
+                            "x": 63,
+                            "y": 12
+                          },
+                          {
+                            "x": 63,
+                            "y": 61
+                          },
+                          {
+                            "x": 12,
+                            "y": 61
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": " 2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "sound baru 3 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 12,
+                            "y": 12
+                          },
+                          {
+                            "x": 63,
+                            "y": 12
+                          },
+                          {
+                            "x": 63,
+                            "y": 61
+                          },
+                          {
+                            "x": 12,
+                            "y": 61
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -10197,6 +10853,15 @@
             "objectName": "buah"
           },
           {
+            "objectName": "NewSprite6"
+          },
+          {
+            "objectName": "lagu"
+          },
+          {
+            "objectName": "pause_screen"
+          },
+          {
             "objectName": "pisang"
           },
           {
@@ -10228,6 +10893,12 @@
           },
           {
             "objectName": "back"
+          },
+          {
+            "objectName": "targetmonyet"
+          },
+          {
+            "objectName": "suara"
           }
         ]
       },
@@ -10252,6 +10923,24 @@
               "parameters": [
                 "",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "ulangi",
+                "ButtonFSM",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "pause_screen"
               ]
             }
           ]
@@ -10804,6 +11493,96 @@
           "conditions": [
             {
               "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "bolang",
+                "NewSprite3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "bolang",
+                "Tween",
+                "\"JATUH\"",
+                "bolang.X()",
+                "bolang.Y()+900",
+                "\"bounce\"",
+                "1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "bolang",
+                "Animation",
+                "=",
+                "\"JATUH\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::Exists"
+              },
+              "parameters": [
+                "bolang",
+                "Tween",
+                "\"JATUH\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "ulangi",
+                "ButtonFSM",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"LOSE\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "DepartScene"
               },
               "parameters": [
@@ -10957,301 +11736,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "disabled": true,
-              "folded": true,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "NewSprite2",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "randtype",
-                    "=",
-                    "RandomInRange(0,1)"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "randtype",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "countpisang",
-                            "<",
-                            "4"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "pisang",
-                        "NewSprite2.X()",
-                        "NewSprite2.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "countpisang",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "NewSprite2",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "countdaging",
-                                ">=",
-                                "3"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "countpisang",
-                                "<",
-                                "4"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "pisang",
-                            "NewSprite2.X()",
-                            "NewSprite2.Y()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "countpisang",
-                            "+",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "NewSprite2",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "randtype",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "countdaging",
-                            "<",
-                            "4"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "daging",
-                        "NewSprite2.X()",
-                        "NewSprite2.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "countdaging",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "NewSprite2",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "countpisang",
-                                ">=",
-                                "3"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "countdaging",
-                                "<",
-                                "4"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "daging",
-                            "NewSprite2.X()",
-                            "NewSprite2.Y()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "countdaging",
-                            "+",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "NewSprite2",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             }
           ]
         },
@@ -11277,68 +11761,436 @@
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "NumberVariable"
               },
               "parameters": [
-                "bolang",
-                "NewSprite3",
-                "",
-                "",
-                ""
+                "buah2",
+                "=",
+                "0"
               ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-              },
-              "parameters": [
-                "bolang",
-                "Tween",
-                "\"JATUH\"",
-                "bolang.X()",
-                "bolang.Y()+900",
-                "\"bounce\"",
-                "1",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "buah",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "buah",
+                    "Animation",
+                    "=",
+                    "\"0\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "buah",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "point",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushString"
+                  },
+                  "parameters": [
+                    "collect",
+                    "\"pisang\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"collect\"",
+                    "\"info\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Count",
+                    "+",
+                    "1"
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "bolang",
-                "Animation",
-                "=",
-                "\"JATUH\""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "buah",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "buah",
+                    "Animation",
+                    "=",
+                    "\"1\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "buah",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "point",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushString"
+                  },
+                  "parameters": [
+                    "collect",
+                    "\"daging\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"collect\"",
+                    "\"info\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Count",
+                    "+",
+                    "1"
+                  ]
+                }
               ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "targetmonyet",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "3",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "cek",
+                        "=",
+                        "collect[i]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "i",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "cek",
+                            "=",
+                            "\"pisang\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "buah",
+                            "bolang.X()",
+                            "bolang.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Animation",
+                            "=",
+                            "\"0\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "buah2",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Tween",
+                            "\"monyet\"",
+                            "MONYET.X()",
+                            "MONYET.Y()",
+                            "\"easeOutQuad\"",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "cek",
+                            "=",
+                            "\"daging\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "buah",
+                            "bolang.X()",
+                            "bolang.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Animation",
+                            "=",
+                            "\"1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "buah2",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "buah",
+                            "Tween",
+                            "\"monyet\"",
+                            "MONYET.X()",
+                            "MONYET.Y()",
+                            "\"easeOutQuad\"",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "Tween::Exists"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "bolang",
-                "Tween",
-                "\"JATUH\""
+                "kenamonyet",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "infiniteLoopWarning": true,
+          "type": "BuiltinCommonInstructions::While",
+          "whileConditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "i",
+                "!=",
+                "3"
+              ]
+            }
+          ],
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "point",
+                ">",
+                "3"
               ]
             }
           ],
           "actions": [
             {
               "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "ulangi",
+                "ButtonFSM",
+                "yes"
+              ]
+            },
+            {
+              "type": {
                 "value": "ShowLayer"
               },
               "parameters": [
                 "",
-                "\"losekenarumput\""
+                "\"LOSE\""
               ]
             },
             {
@@ -11348,232 +12200,6 @@
               "parameters": [
                 "",
                 "0"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "bolang",
-                "buah",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::Name"
-              },
-              "parameters": [
-                "buah",
-                "Animation",
-                "=",
-                "\"0\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "buah",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "point",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "PushString"
-              },
-              "parameters": [
-                "collect",
-                "\"pisang\""
-              ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "\"collect\"",
-                "\"info\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "bolang",
-                "buah",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::Name"
-              },
-              "parameters": [
-                "buah",
-                "Animation",
-                "=",
-                "\"1\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "buah",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "point",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "PushString"
-              },
-              "parameters": [
-                "collect",
-                "\"daging\""
-              ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "\"collect\"",
-                "\"info\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "bolang",
-                "buah",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::Name"
-              },
-              "parameters": [
-                "buah",
-                "Animation",
-                "=",
-                "\"0\""
-              ]
-            },
-            {
-              "type": {
-                "value": "StringVariable"
-              },
-              "parameters": [
-                "collect",
-                "!=",
-                "\"pisang\""
-              ]
-            }
-          ],
-          "actions": []
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "bolang",
-                "buah",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::Name"
-              },
-              "parameters": [
-                "buah",
-                "Animation",
-                "=",
-                "\"1\""
-              ]
-            },
-            {
-              "type": {
-                "value": "StringVariable"
-              },
-              "parameters": [
-                "collect",
-                "!=",
-                "\"daging\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ShowLayer"
-              },
-              "parameters": [
-                "",
-                "\"LOSE\""
               ]
             }
           ]
@@ -11595,6 +12221,15 @@
           "actions": [
             {
               "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"LOSE\""
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
@@ -11602,48 +12237,62 @@
                 "\"level1\"",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "point",
+                "=",
+                "0"
+              ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::ForEachChildVariable",
-          "iterableVariableName": "collect",
-          "valueIteratorVariableName": "child",
-          "keyIteratorVariableName": "",
-          "conditions": [],
-          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "NumberVariable"
+                "value": "ButtonStates::ButtonFSM::IsClicked"
               },
               "parameters": [
-                "point",
-                ">",
-                "3"
+                "NewSprite6",
+                "ButtonFSM",
+                ""
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "ShowLayer"
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
               },
               "parameters": [
-                "",
-                "\"losekenarumput\""
+                "suara",
+                "Tween",
+                "\"suara\"",
+                "NewSprite6.X() + 50",
+                "NewSprite6.Y() + 150",
+                "\"linear\"",
+                "1",
+                ""
               ]
             },
             {
               "type": {
-                "value": "ChangeTimeScale"
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
               },
               "parameters": [
-                "",
-                "0"
+                "lagu",
+                "Tween",
+                "\"suara\"",
+                "NewSprite6.X() + 50",
+                "NewSprite6.Y() +100",
+                "\"linear\"",
+                "1",
+                ""
               ]
             }
           ]
@@ -13079,28 +13728,6 @@
               "value": "Idle",
               "type": "Choice",
               "label": "State",
-              "choices": [
-                {
-                  "label": "Idle",
-                  "value": "Idle"
-                },
-                {
-                  "label": "Hovered",
-                  "value": "Hovered"
-                },
-                {
-                  "label": "PressedInside",
-                  "value": "PressedInside"
-                },
-                {
-                  "label": "PressedOutside",
-                  "value": "PressedOutside"
-                },
-                {
-                  "label": "Validated",
-                  "value": "Validated"
-                }
-              ],
               "hidden": true,
               "name": "State"
             },
@@ -15547,140 +16174,6 @@
               "type": "Choice",
               "label": "Fade-in easing",
               "group": "Speed",
-              "choices": [
-                {
-                  "label": "linear",
-                  "value": "linear"
-                },
-                {
-                  "label": "easeInQuad",
-                  "value": "easeInQuad"
-                },
-                {
-                  "label": "easeOutQuad",
-                  "value": "easeOutQuad"
-                },
-                {
-                  "label": "easeInOutQuad",
-                  "value": "easeInOutQuad"
-                },
-                {
-                  "label": "easeInCubic",
-                  "value": "easeInCubic"
-                },
-                {
-                  "label": "easeOutCubic",
-                  "value": "easeOutCubic"
-                },
-                {
-                  "label": "easeInOutCubic",
-                  "value": "easeInOutCubic"
-                },
-                {
-                  "label": "easeInQuart",
-                  "value": "easeInQuart"
-                },
-                {
-                  "label": "easeOutQuart",
-                  "value": "easeOutQuart"
-                },
-                {
-                  "label": "easeInOutQuart",
-                  "value": "easeInOutQuart"
-                },
-                {
-                  "label": "easeInQuint",
-                  "value": "easeInQuint"
-                },
-                {
-                  "label": "easeOutQuint",
-                  "value": "easeOutQuint"
-                },
-                {
-                  "label": "easeInOutQuint",
-                  "value": "easeInOutQuint"
-                },
-                {
-                  "label": "easeInOutSine",
-                  "value": "easeInOutSine"
-                },
-                {
-                  "label": "easeInExpo",
-                  "value": "easeInExpo"
-                },
-                {
-                  "label": "easeOutExpo",
-                  "value": "easeOutExpo"
-                },
-                {
-                  "label": "easeInOutExpo",
-                  "value": "easeInOutExpo"
-                },
-                {
-                  "label": "easeInCirc",
-                  "value": "easeInCirc"
-                },
-                {
-                  "label": "easeOutCirc",
-                  "value": "easeOutCirc"
-                },
-                {
-                  "label": "easeInOutCirc",
-                  "value": "easeInOutCirc"
-                },
-                {
-                  "label": "easeOutBounce",
-                  "value": "easeOutBounce"
-                },
-                {
-                  "label": "easeInBack",
-                  "value": "easeInBack"
-                },
-                {
-                  "label": "easeOutBack",
-                  "value": "easeOutBack"
-                },
-                {
-                  "label": "easeInOutBack",
-                  "value": "easeInOutBack"
-                },
-                {
-                  "label": "elastic",
-                  "value": "elastic"
-                },
-                {
-                  "label": "swingFromTo",
-                  "value": "swingFromTo"
-                },
-                {
-                  "label": "swingFrom",
-                  "value": "swingFrom"
-                },
-                {
-                  "label": "swingTo",
-                  "value": "swingTo"
-                },
-                {
-                  "label": "bounce",
-                  "value": "bounce"
-                },
-                {
-                  "label": "bouncePast",
-                  "value": "bouncePast"
-                },
-                {
-                  "label": "easeFromTo",
-                  "value": "easeFromTo"
-                },
-                {
-                  "label": "easeFrom",
-                  "value": "easeFrom"
-                },
-                {
-                  "label": "easeTo",
-                  "value": "easeTo"
-                }
-              ],
               "name": "FadeInEasing"
             },
             {
@@ -15688,140 +16181,6 @@
               "type": "Choice",
               "label": "Fade-out easing",
               "group": "Speed",
-              "choices": [
-                {
-                  "label": "linear",
-                  "value": "linear"
-                },
-                {
-                  "label": "easeInQuad",
-                  "value": "easeInQuad"
-                },
-                {
-                  "label": "easeOutQuad",
-                  "value": "easeOutQuad"
-                },
-                {
-                  "label": "easeInOutQuad",
-                  "value": "easeInOutQuad"
-                },
-                {
-                  "label": "easeInCubic",
-                  "value": "easeInCubic"
-                },
-                {
-                  "label": "easeOutCubic",
-                  "value": "easeOutCubic"
-                },
-                {
-                  "label": "easeInOutCubic",
-                  "value": "easeInOutCubic"
-                },
-                {
-                  "label": "easeInQuart",
-                  "value": "easeInQuart"
-                },
-                {
-                  "label": "easeOutQuart",
-                  "value": "easeOutQuart"
-                },
-                {
-                  "label": "easeInOutQuart",
-                  "value": "easeInOutQuart"
-                },
-                {
-                  "label": "easeInQuint",
-                  "value": "easeInQuint"
-                },
-                {
-                  "label": "easeOutQuint",
-                  "value": "easeOutQuint"
-                },
-                {
-                  "label": "easeInOutQuint",
-                  "value": "easeInOutQuint"
-                },
-                {
-                  "label": "easeInOutSine",
-                  "value": "easeInOutSine"
-                },
-                {
-                  "label": "easeInExpo",
-                  "value": "easeInExpo"
-                },
-                {
-                  "label": "easeOutExpo",
-                  "value": "easeOutExpo"
-                },
-                {
-                  "label": "easeInOutExpo",
-                  "value": "easeInOutExpo"
-                },
-                {
-                  "label": "easeInCirc",
-                  "value": "easeInCirc"
-                },
-                {
-                  "label": "easeOutCirc",
-                  "value": "easeOutCirc"
-                },
-                {
-                  "label": "easeInOutCirc",
-                  "value": "easeInOutCirc"
-                },
-                {
-                  "label": "easeOutBounce",
-                  "value": "easeOutBounce"
-                },
-                {
-                  "label": "easeInBack",
-                  "value": "easeInBack"
-                },
-                {
-                  "label": "easeOutBack",
-                  "value": "easeOutBack"
-                },
-                {
-                  "label": "easeInOutBack",
-                  "value": "easeInOutBack"
-                },
-                {
-                  "label": "elastic",
-                  "value": "elastic"
-                },
-                {
-                  "label": "swingFromTo",
-                  "value": "swingFromTo"
-                },
-                {
-                  "label": "swingFrom",
-                  "value": "swingFrom"
-                },
-                {
-                  "label": "swingTo",
-                  "value": "swingTo"
-                },
-                {
-                  "label": "bounce",
-                  "value": "bounce"
-                },
-                {
-                  "label": "bouncePast",
-                  "value": "bouncePast"
-                },
-                {
-                  "label": "easeFromTo",
-                  "value": "easeFromTo"
-                },
-                {
-                  "label": "easeFrom",
-                  "value": "easeFrom"
-                },
-                {
-                  "label": "easeTo",
-                  "value": "easeTo"
-                }
-              ],
               "name": "FadeOutEasing"
             },
             {
@@ -15844,20 +16203,6 @@
               "value": "Idle",
               "type": "Choice",
               "label": "",
-              "choices": [
-                {
-                  "label": "Idle",
-                  "value": "Idle"
-                },
-                {
-                  "label": "Focused",
-                  "value": "Focused"
-                },
-                {
-                  "label": "Pressed",
-                  "value": "Pressed"
-                }
-              ],
               "hidden": true,
               "name": "PreviousState"
             },
@@ -15886,20 +16231,6 @@
               "value": "NoTween",
               "type": "Choice",
               "label": "",
-              "choices": [
-                {
-                  "label": "NoTween",
-                  "value": "NoTween"
-                },
-                {
-                  "label": "FadeIn",
-                  "value": "FadeIn"
-                },
-                {
-                  "label": "FadeOut",
-                  "value": "FadeOut"
-                }
-              ],
               "hidden": true,
               "name": "TweenState"
             },
@@ -16922,140 +17253,6 @@
               "type": "Choice",
               "label": "Fade-in easing",
               "group": "Speed",
-              "choices": [
-                {
-                  "label": "linear",
-                  "value": "linear"
-                },
-                {
-                  "label": "easeInQuad",
-                  "value": "easeInQuad"
-                },
-                {
-                  "label": "easeOutQuad",
-                  "value": "easeOutQuad"
-                },
-                {
-                  "label": "easeInOutQuad",
-                  "value": "easeInOutQuad"
-                },
-                {
-                  "label": "easeInCubic",
-                  "value": "easeInCubic"
-                },
-                {
-                  "label": "easeOutCubic",
-                  "value": "easeOutCubic"
-                },
-                {
-                  "label": "easeInOutCubic",
-                  "value": "easeInOutCubic"
-                },
-                {
-                  "label": "easeInQuart",
-                  "value": "easeInQuart"
-                },
-                {
-                  "label": "easeOutQuart",
-                  "value": "easeOutQuart"
-                },
-                {
-                  "label": "easeInOutQuart",
-                  "value": "easeInOutQuart"
-                },
-                {
-                  "label": "easeInQuint",
-                  "value": "easeInQuint"
-                },
-                {
-                  "label": "easeOutQuint",
-                  "value": "easeOutQuint"
-                },
-                {
-                  "label": "easeInOutQuint",
-                  "value": "easeInOutQuint"
-                },
-                {
-                  "label": "easeInOutSine",
-                  "value": "easeInOutSine"
-                },
-                {
-                  "label": "easeInExpo",
-                  "value": "easeInExpo"
-                },
-                {
-                  "label": "easeOutExpo",
-                  "value": "easeOutExpo"
-                },
-                {
-                  "label": "easeInOutExpo",
-                  "value": "easeInOutExpo"
-                },
-                {
-                  "label": "easeInCirc",
-                  "value": "easeInCirc"
-                },
-                {
-                  "label": "easeOutCirc",
-                  "value": "easeOutCirc"
-                },
-                {
-                  "label": "easeInOutCirc",
-                  "value": "easeInOutCirc"
-                },
-                {
-                  "label": "easeOutBounce",
-                  "value": "easeOutBounce"
-                },
-                {
-                  "label": "easeInBack",
-                  "value": "easeInBack"
-                },
-                {
-                  "label": "easeOutBack",
-                  "value": "easeOutBack"
-                },
-                {
-                  "label": "easeInOutBack",
-                  "value": "easeInOutBack"
-                },
-                {
-                  "label": "elastic",
-                  "value": "elastic"
-                },
-                {
-                  "label": "swingFromTo",
-                  "value": "swingFromTo"
-                },
-                {
-                  "label": "swingFrom",
-                  "value": "swingFrom"
-                },
-                {
-                  "label": "swingTo",
-                  "value": "swingTo"
-                },
-                {
-                  "label": "bounce",
-                  "value": "bounce"
-                },
-                {
-                  "label": "bouncePast",
-                  "value": "bouncePast"
-                },
-                {
-                  "label": "easeFromTo",
-                  "value": "easeFromTo"
-                },
-                {
-                  "label": "easeFrom",
-                  "value": "easeFrom"
-                },
-                {
-                  "label": "easeTo",
-                  "value": "easeTo"
-                }
-              ],
               "name": "FadeInEasing"
             },
             {
@@ -17063,160 +17260,12 @@
               "type": "Choice",
               "label": "Fade-out easing",
               "group": "Speed",
-              "choices": [
-                {
-                  "label": "linear",
-                  "value": "linear"
-                },
-                {
-                  "label": "easeInQuad",
-                  "value": "easeInQuad"
-                },
-                {
-                  "label": "easeOutQuad",
-                  "value": "easeOutQuad"
-                },
-                {
-                  "label": "easeInOutQuad",
-                  "value": "easeInOutQuad"
-                },
-                {
-                  "label": "easeInCubic",
-                  "value": "easeInCubic"
-                },
-                {
-                  "label": "easeOutCubic",
-                  "value": "easeOutCubic"
-                },
-                {
-                  "label": "easeInOutCubic",
-                  "value": "easeInOutCubic"
-                },
-                {
-                  "label": "easeInQuart",
-                  "value": "easeInQuart"
-                },
-                {
-                  "label": "easeOutQuart",
-                  "value": "easeOutQuart"
-                },
-                {
-                  "label": "easeInOutQuart",
-                  "value": "easeInOutQuart"
-                },
-                {
-                  "label": "easeInQuint",
-                  "value": "easeInQuint"
-                },
-                {
-                  "label": "easeOutQuint",
-                  "value": "easeOutQuint"
-                },
-                {
-                  "label": "easeInOutQuint",
-                  "value": "easeInOutQuint"
-                },
-                {
-                  "label": "easeInOutSine",
-                  "value": "easeInOutSine"
-                },
-                {
-                  "label": "easeInExpo",
-                  "value": "easeInExpo"
-                },
-                {
-                  "label": "easeOutExpo",
-                  "value": "easeOutExpo"
-                },
-                {
-                  "label": "easeInOutExpo",
-                  "value": "easeInOutExpo"
-                },
-                {
-                  "label": "easeInCirc",
-                  "value": "easeInCirc"
-                },
-                {
-                  "label": "easeOutCirc",
-                  "value": "easeOutCirc"
-                },
-                {
-                  "label": "easeInOutCirc",
-                  "value": "easeInOutCirc"
-                },
-                {
-                  "label": "easeOutBounce",
-                  "value": "easeOutBounce"
-                },
-                {
-                  "label": "easeInBack",
-                  "value": "easeInBack"
-                },
-                {
-                  "label": "easeOutBack",
-                  "value": "easeOutBack"
-                },
-                {
-                  "label": "easeInOutBack",
-                  "value": "easeInOutBack"
-                },
-                {
-                  "label": "elastic",
-                  "value": "elastic"
-                },
-                {
-                  "label": "swingFromTo",
-                  "value": "swingFromTo"
-                },
-                {
-                  "label": "swingFrom",
-                  "value": "swingFrom"
-                },
-                {
-                  "label": "swingTo",
-                  "value": "swingTo"
-                },
-                {
-                  "label": "bounce",
-                  "value": "bounce"
-                },
-                {
-                  "label": "bouncePast",
-                  "value": "bouncePast"
-                },
-                {
-                  "label": "easeFromTo",
-                  "value": "easeFromTo"
-                },
-                {
-                  "label": "easeFrom",
-                  "value": "easeFrom"
-                },
-                {
-                  "label": "easeTo",
-                  "value": "easeTo"
-                }
-              ],
               "name": "FadeOutEasing"
             },
             {
               "value": "Idle",
               "type": "Choice",
               "label": "",
-              "choices": [
-                {
-                  "label": "Idle",
-                  "value": "Idle"
-                },
-                {
-                  "label": "Focused",
-                  "value": "Focused"
-                },
-                {
-                  "label": "Pressed",
-                  "value": "Pressed"
-                }
-              ],
               "hidden": true,
               "name": "PreviousState"
             }
@@ -18233,140 +18282,6 @@
               "type": "Choice",
               "label": "Fade-in easing",
               "group": "Speed",
-              "choices": [
-                {
-                  "label": "linear",
-                  "value": "linear"
-                },
-                {
-                  "label": "easeInQuad",
-                  "value": "easeInQuad"
-                },
-                {
-                  "label": "easeOutQuad",
-                  "value": "easeOutQuad"
-                },
-                {
-                  "label": "easeInOutQuad",
-                  "value": "easeInOutQuad"
-                },
-                {
-                  "label": "easeInCubic",
-                  "value": "easeInCubic"
-                },
-                {
-                  "label": "easeOutCubic",
-                  "value": "easeOutCubic"
-                },
-                {
-                  "label": "easeInOutCubic",
-                  "value": "easeInOutCubic"
-                },
-                {
-                  "label": "easeInQuart",
-                  "value": "easeInQuart"
-                },
-                {
-                  "label": "easeOutQuart",
-                  "value": "easeOutQuart"
-                },
-                {
-                  "label": "easeInOutQuart",
-                  "value": "easeInOutQuart"
-                },
-                {
-                  "label": "easeInQuint",
-                  "value": "easeInQuint"
-                },
-                {
-                  "label": "easeOutQuint",
-                  "value": "easeOutQuint"
-                },
-                {
-                  "label": "easeInOutQuint",
-                  "value": "easeInOutQuint"
-                },
-                {
-                  "label": "easeInOutSine",
-                  "value": "easeInOutSine"
-                },
-                {
-                  "label": "easeInExpo",
-                  "value": "easeInExpo"
-                },
-                {
-                  "label": "easeOutExpo",
-                  "value": "easeOutExpo"
-                },
-                {
-                  "label": "easeInOutExpo",
-                  "value": "easeInOutExpo"
-                },
-                {
-                  "label": "easeInCirc",
-                  "value": "easeInCirc"
-                },
-                {
-                  "label": "easeOutCirc",
-                  "value": "easeOutCirc"
-                },
-                {
-                  "label": "easeInOutCirc",
-                  "value": "easeInOutCirc"
-                },
-                {
-                  "label": "easeOutBounce",
-                  "value": "easeOutBounce"
-                },
-                {
-                  "label": "easeInBack",
-                  "value": "easeInBack"
-                },
-                {
-                  "label": "easeOutBack",
-                  "value": "easeOutBack"
-                },
-                {
-                  "label": "easeInOutBack",
-                  "value": "easeInOutBack"
-                },
-                {
-                  "label": "elastic",
-                  "value": "elastic"
-                },
-                {
-                  "label": "swingFromTo",
-                  "value": "swingFromTo"
-                },
-                {
-                  "label": "swingFrom",
-                  "value": "swingFrom"
-                },
-                {
-                  "label": "swingTo",
-                  "value": "swingTo"
-                },
-                {
-                  "label": "bounce",
-                  "value": "bounce"
-                },
-                {
-                  "label": "bouncePast",
-                  "value": "bouncePast"
-                },
-                {
-                  "label": "easeFromTo",
-                  "value": "easeFromTo"
-                },
-                {
-                  "label": "easeFrom",
-                  "value": "easeFrom"
-                },
-                {
-                  "label": "easeTo",
-                  "value": "easeTo"
-                }
-              ],
               "name": "FadeInEasing"
             },
             {
@@ -18374,160 +18289,12 @@
               "type": "Choice",
               "label": "Fade-out easing",
               "group": "Speed",
-              "choices": [
-                {
-                  "label": "linear",
-                  "value": "linear"
-                },
-                {
-                  "label": "easeInQuad",
-                  "value": "easeInQuad"
-                },
-                {
-                  "label": "easeOutQuad",
-                  "value": "easeOutQuad"
-                },
-                {
-                  "label": "easeInOutQuad",
-                  "value": "easeInOutQuad"
-                },
-                {
-                  "label": "easeInCubic",
-                  "value": "easeInCubic"
-                },
-                {
-                  "label": "easeOutCubic",
-                  "value": "easeOutCubic"
-                },
-                {
-                  "label": "easeInOutCubic",
-                  "value": "easeInOutCubic"
-                },
-                {
-                  "label": "easeInQuart",
-                  "value": "easeInQuart"
-                },
-                {
-                  "label": "easeOutQuart",
-                  "value": "easeOutQuart"
-                },
-                {
-                  "label": "easeInOutQuart",
-                  "value": "easeInOutQuart"
-                },
-                {
-                  "label": "easeInQuint",
-                  "value": "easeInQuint"
-                },
-                {
-                  "label": "easeOutQuint",
-                  "value": "easeOutQuint"
-                },
-                {
-                  "label": "easeInOutQuint",
-                  "value": "easeInOutQuint"
-                },
-                {
-                  "label": "easeInOutSine",
-                  "value": "easeInOutSine"
-                },
-                {
-                  "label": "easeInExpo",
-                  "value": "easeInExpo"
-                },
-                {
-                  "label": "easeOutExpo",
-                  "value": "easeOutExpo"
-                },
-                {
-                  "label": "easeInOutExpo",
-                  "value": "easeInOutExpo"
-                },
-                {
-                  "label": "easeInCirc",
-                  "value": "easeInCirc"
-                },
-                {
-                  "label": "easeOutCirc",
-                  "value": "easeOutCirc"
-                },
-                {
-                  "label": "easeInOutCirc",
-                  "value": "easeInOutCirc"
-                },
-                {
-                  "label": "easeOutBounce",
-                  "value": "easeOutBounce"
-                },
-                {
-                  "label": "easeInBack",
-                  "value": "easeInBack"
-                },
-                {
-                  "label": "easeOutBack",
-                  "value": "easeOutBack"
-                },
-                {
-                  "label": "easeInOutBack",
-                  "value": "easeInOutBack"
-                },
-                {
-                  "label": "elastic",
-                  "value": "elastic"
-                },
-                {
-                  "label": "swingFromTo",
-                  "value": "swingFromTo"
-                },
-                {
-                  "label": "swingFrom",
-                  "value": "swingFrom"
-                },
-                {
-                  "label": "swingTo",
-                  "value": "swingTo"
-                },
-                {
-                  "label": "bounce",
-                  "value": "bounce"
-                },
-                {
-                  "label": "bouncePast",
-                  "value": "bouncePast"
-                },
-                {
-                  "label": "easeFromTo",
-                  "value": "easeFromTo"
-                },
-                {
-                  "label": "easeFrom",
-                  "value": "easeFrom"
-                },
-                {
-                  "label": "easeTo",
-                  "value": "easeTo"
-                }
-              ],
               "name": "FadeOutEasing"
             },
             {
               "value": "Idle",
               "type": "Choice",
               "label": "",
-              "choices": [
-                {
-                  "label": "Idle",
-                  "value": "Idle"
-                },
-                {
-                  "label": "Focused",
-                  "value": "Focused"
-                },
-                {
-                  "label": "Pressed",
-                  "value": "Pressed"
-                }
-              ],
               "hidden": true,
               "name": "PreviousState"
             }
@@ -27409,16 +27176,6 @@
               "type": "Choice",
               "label": "Joystick name",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "JoystickIdentifier"
             },
             {
@@ -27552,16 +27309,6 @@
               "type": "Choice",
               "label": "Walk joystick",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "JoystickIdentifier"
             },
             {
@@ -27684,16 +27431,6 @@
               "type": "Choice",
               "label": "Walk joystick",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "JoystickIdentifier"
             },
             {
@@ -28649,16 +28386,6 @@
               "type": "Choice",
               "label": "Camera joystick",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "CameraStick"
             },
             {
@@ -28887,16 +28614,6 @@
               "type": "Choice",
               "label": "Steer joystick",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "SteerJoystickIdentifier"
             },
             {
@@ -28904,16 +28621,6 @@
               "type": "Choice",
               "label": "Speed joystick",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "SpeedJoystickIdentifier"
             },
             {
@@ -29458,16 +29165,6 @@
               "value": "Primary",
               "type": "Choice",
               "label": "Joystick name",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "JoystickIdentifier"
             },
             {
@@ -29475,20 +29172,6 @@
               "type": "Choice",
               "label": "Stick mode",
               "group": "Controls",
-              "choices": [
-                {
-                  "label": "Analog",
-                  "value": "Analog"
-                },
-                {
-                  "label": "360°",
-                  "value": "360°"
-                },
-                {
-                  "label": "8 Directions",
-                  "value": "8 Directions"
-                }
-              ],
               "name": "StickMode"
             }
           ],
@@ -30754,16 +30437,6 @@
               "value": "Primary",
               "type": "Choice",
               "label": "Joystick name",
-              "choices": [
-                {
-                  "label": "Primary",
-                  "value": "Primary"
-                },
-                {
-                  "label": "Secondary",
-                  "value": "Secondary"
-                }
-              ],
               "name": "JoystickIdentifier"
             },
             {
