@@ -1497,6 +1497,110 @@
         "name": "pangan 5.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "selamat 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 6.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 7.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 8.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 9.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat 10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat 10.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "PATUNG JAGA RIMBA.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PATUNG JAGA RIMBA.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite17.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite17",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite18",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -4556,9 +4660,34 @@
       "value": 0
     },
     {
-      "name": "level",
-      "type": "number",
-      "value": 0
+      "name": "global",
+      "type": "structure",
+      "children": [
+        {
+          "name": "endgame",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "level",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tempload",
+      "type": "string",
+      "value": ""
     }
   ],
   "layouts": [
@@ -4687,15 +4816,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 196,
           "keepRatio": true,
           "layer": "",
           "name": "buayajudul",
           "persistentUuid": "200f7641-2c48-4f82-8deb-7ce673983e7a",
-          "width": 0,
-          "x": 851,
-          "y": 538,
+          "width": 594,
+          "x": 895,
+          "y": 543,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -4710,8 +4840,8 @@
           "name": "ikanjudul",
           "persistentUuid": "f35f494b-5630-4ae1-9238-b2a4fc71350d",
           "width": 0,
-          "x": 786,
-          "y": 557,
+          "x": 810,
+          "y": 541,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -4760,8 +4890,8 @@
           "opacity": 0,
           "persistentUuid": "c84e3ff8-8d60-4baa-b0da-7a2f11cd7665",
           "width": 1280,
-          "x": -2,
-          "y": -60,
+          "x": 1,
+          "y": 2,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -5698,6 +5828,17 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite5",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
         }
       ],
       "objectsFolderStructure": {
@@ -5735,6 +5876,9 @@
           },
           {
             "objectName": "NewSprite3"
+          },
+          {
+            "objectName": "NewSprite5"
           }
         ]
       },
@@ -6334,7 +6478,7 @@
                 "value": "Wait"
               },
               "parameters": [
-                "1"
+                "4"
               ]
             },
             {
@@ -6512,24 +6656,36 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.10768079385623779,
+        "zoomFactor": 0.23089183385225404,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "ysort",
+          "objects": [
+            {
+              "name": "PATUNG"
+            },
+            {
+              "name": "marcus2"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
         {
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 1440,
+          "height": 1478,
           "keepRatio": true,
           "layer": "",
           "name": "NewSprite",
           "persistentUuid": "65206d99-3fad-4f05-ad45-5b6d8a2a8a1e",
-          "width": 1386,
-          "x": -16,
-          "y": -709,
+          "width": 1389,
+          "x": 11,
+          "y": -773,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -6876,7 +7032,7 @@
           "width": 0,
           "x": 572,
           "y": -401,
-          "zOrder": 2,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6955,7 +7111,7 @@
           "name": "marcus2",
           "persistentUuid": "c61cbee8-0ef6-4713-963b-d09804a5432f",
           "width": 180,
-          "x": 556,
+          "x": 565,
           "y": 395,
           "zOrder": 10,
           "numberProperties": [],
@@ -6973,7 +7129,7 @@
           "width": 0,
           "x": 585,
           "y": -1025,
-          "zOrder": 31,
+          "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7004,7 +7160,7 @@
           "opacity": 0,
           "persistentUuid": "0d445f5a-9193-4ccb-a6fb-d269150cd315",
           "width": 0,
-          "x": 626,
+          "x": 630,
           "y": -802,
           "zOrder": 33,
           "numberProperties": [],
@@ -7139,7 +7295,7 @@
           "name": "putih",
           "opacity": 0,
           "persistentUuid": "72ef69c4-e425-4160-aa5a-32fe3ac11513",
-          "width": 1280,
+          "width": 1308,
           "x": 17,
           "y": -1256,
           "zOrder": 34,
@@ -7194,6 +7350,95 @@
           "x": 1353,
           "y": -1291,
           "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 174,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "opacity": 0,
+          "persistentUuid": "67e0f05e-d196-41b3-bbc4-200407b12a45",
+          "width": 15,
+          "x": 543,
+          "y": -387,
+          "zOrder": 43,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 170,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "opacity": 0,
+          "persistentUuid": "6a81d3bb-0a76-4add-9664-2b2c2935bdf0",
+          "width": 15,
+          "x": 750,
+          "y": -383,
+          "zOrder": 43,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 10,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "opacity": 0,
+          "persistentUuid": "77a37b96-54e4-4096-a7da-74370b1656db",
+          "width": 203,
+          "x": 553,
+          "y": -387,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 10,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "opacity": 0,
+          "persistentUuid": "9cdde7c0-923c-4ed8-ba53-64da7e862553",
+          "width": 203,
+          "x": 553,
+          "y": -225,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 17,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite7",
+          "persistentUuid": "d1016f8e-2cc2-48be-aed8-a388b4df165c",
+          "width": 134,
+          "x": 590,
+          "y": -345,
+          "zOrder": 45,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8065,26 +8310,26 @@
                       "centerPoint": {
                         "automatic": true,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 91.5,
+                        "y": 241
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 33.5,
-                            "y": 39.5
+                            "x": 28,
+                            "y": 22.5
                           },
                           {
-                            "x": 139.5,
-                            "y": 37.5
+                            "x": 147,
+                            "y": 23.5
                           },
                           {
-                            "x": 141,
-                            "y": 127.5
+                            "x": 163,
+                            "y": 173.5
                           },
                           {
-                            "x": 35,
-                            "y": 127.5
+                            "x": 19,
+                            "y": 172
                           }
                         ]
                       ]
@@ -8107,32 +8352,32 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 1,
+                        "y": 146
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 90,
+                        "y": 244
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 33.5,
-                            "y": 39.5
+                            "x": 32,
+                            "y": 189.5
                           },
                           {
-                            "x": 139.5,
-                            "y": 37.5
+                            "x": 151.5,
+                            "y": 191
                           },
                           {
-                            "x": 141,
-                            "y": 127.5
+                            "x": 158,
+                            "y": 314.5
                           },
                           {
-                            "x": 35,
-                            "y": 127.5
+                            "x": 26,
+                            "y": 313.5
                           }
                         ]
                       ]
@@ -8387,7 +8632,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -8397,6 +8642,54 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "PATUNG .....png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 107,
+                            "y": 0
+                          },
+                          {
+                            "x": 107,
+                            "y": 19
+                          },
+                          {
+                            "x": 0,
+                            "y": 19
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "PATUNG JAGA RIMBA.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -10274,6 +10567,128 @@
             "lineHeight": 0,
             "color": "255;255;255"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite17",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite7",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite7",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite18",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -10307,6 +10722,9 @@
             "objectName": "NewSprite5"
           },
           {
+            "objectName": "NewSprite2"
+          },
+          {
             "objectName": "NewSprite6"
           },
           {
@@ -10332,6 +10750,9 @@
           },
           {
             "objectName": "PATUNG"
+          },
+          {
+            "objectName": "NewSprite7"
           },
           {
             "objectName": "TEMPAT"
@@ -10390,6 +10811,46 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ReadStringFromStorage"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "",
+                    "tempload"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "tempload",
+                    "global"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "camera1",
+                    "SmoothCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "camera2",
+                    "SmoothCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Cache"
                   },
                   "parameters": [
@@ -10430,32 +10891,10 @@
                 },
                 {
                   "type": {
-                    "value": "ActivateBehavior"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "camera1",
-                    "SmoothCamera",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "camera2",
-                    "SmoothCamera",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "level",
-                    "=",
-                    "2"
+                    "NewSprite7"
                   ]
                 }
               ],
@@ -10468,95 +10907,33 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "level",
+                        "global.endgame",
                         "=",
-                        "2"
+                        "1"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ActivateBehavior"
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
-                        "camera2",
-                        "SmoothCamera",
-                        "yes"
+                        "PATUNG",
+                        "Animation",
+                        "=",
+                        "\"2\""
                       ]
                     },
                     {
                       "type": {
-                        "value": "ActivateBehavior"
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
-                        "marcus2",
-                        "SmoothCamera",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "marcus2",
-                        "TopDownMovement",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "marcus2",
-                        "TopDownMultitouchMapper",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "putih2",
-                        "Tween",
-                        "\"1\"",
-                        "255",
-                        "\"linear\"",
-                        "0.5",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "putih2",
-                        "Tween",
-                        "\"3\"",
-                        "0",
-                        "\"linear\"",
-                        "0.5",
-                        ""
+                        "tekspatung",
+                        "Animation",
+                        "=",
+                        "\"2\""
                       ]
                     },
                     {
@@ -10564,77 +10941,118 @@
                         "value": "Delete"
                       },
                       "parameters": [
-                        "rumput3",
+                        "twka_menuju_hutan",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "Montre"
+                        "value": "EcrireFichierTxt"
                       },
                       "parameters": [
-                        "teks3",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "level3",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "tekslevel3",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "2.5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "tekslevel3",
-                        ""
+                        "\"game\"",
+                        "\"game\"",
+                        "ToJSON(global)"
                       ]
                     }
                   ],
                   "events": [
                     {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "tekspatung",
+                            "=",
+                            "570"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "tekspatung",
+                            "=",
+                            "-150"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "ANIMASI Level 2 kebuka"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "global.level[0]",
+                        ">=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "Tween::HasFinished"
+                            "value": "NumberVariable"
                           },
                           "parameters": [
-                            "putih2",
-                            "Tween",
-                            "\"3\""
+                            "global.level[0]",
+                            "=",
+                            "1"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "NewSprite"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "twka_menuju_hutan",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "marcus2",
+                            "camera1",
                             "SmoothCamera",
                             "yes"
                           ]
@@ -10645,8 +11063,8 @@
                           },
                           "parameters": [
                             "marcus2",
-                            "TopDownMultitouchMapper",
-                            "yes"
+                            "SmoothCamera",
+                            ""
                           ]
                         },
                         {
@@ -10656,7 +11074,7 @@
                           "parameters": [
                             "marcus2",
                             "TopDownMovement",
-                            "yes"
+                            ""
                           ]
                         },
                         {
@@ -10664,9 +11082,229 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "camera2",
-                            "SmoothCamera",
-                            "no"
+                            "marcus2",
+                            "TopDownMultitouchMapper",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "putih",
+                            "Tween",
+                            "\"1\"",
+                            "255",
+                            "\"linear\"",
+                            "0.5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "putih",
+                            "Tween",
+                            "\"2\"",
+                            "0",
+                            "\"linear\"",
+                            "0.5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "rumput2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "level2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "level4",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "tekslevel2kebuka",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "tekslevel2kebuka",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Tween::HasFinished"
+                              },
+                              "parameters": [
+                                "putih",
+                                "Tween",
+                                "\"2\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "marcus2",
+                                "TopDownMultitouchMapper",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "marcus2",
+                                "TopDownMovement",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "marcus2",
+                                "SmoothCamera",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "camera1",
+                                "SmoothCamera",
+                                "no"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "global.level[0]",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"game\"",
+                                "\"game\"",
+                                "ToJSON(global)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "global.level[0]",
+                            ">",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "rumput2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "level2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "level4",
+                            ""
                           ]
                         }
                       ]
@@ -10681,175 +11319,65 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "level",
-                        "=",
-                        "1"
+                        "global.level[1]",
+                        ">=",
+                        "2"
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "camera1",
-                        "SmoothCamera",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "marcus2",
-                        "SmoothCamera",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "marcus2",
-                        "TopDownMovement",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "marcus2",
-                        "TopDownMultitouchMapper",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "putih",
-                        "Tween",
-                        "\"1\"",
-                        "255",
-                        "\"linear\"",
-                        "0.5",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "putih",
-                        "Tween",
-                        "\"2\"",
-                        "0",
-                        "\"linear\"",
-                        "0.5",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "rumput2",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "level4",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "level2",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "tekslevel2kebuka",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "2.5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "tekslevel2kebuka",
-                        ""
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "Tween::HasFinished"
+                            "value": "NumberVariable"
                           },
                           "parameters": [
-                            "putih",
-                            "Tween",
-                            "\"2\""
+                            "global.level[1]",
+                            "=",
+                            "1"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "NewSprite"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "twka_menuju_hutan",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "camera2",
+                            "SmoothCamera",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
                             "marcus2",
-                            "TopDownMultitouchMapper",
-                            "yes"
+                            "SmoothCamera",
+                            ""
                           ]
                         },
                         {
@@ -10859,7 +11387,7 @@
                           "parameters": [
                             "marcus2",
                             "TopDownMovement",
-                            "yes"
+                            ""
                           ]
                         },
                         {
@@ -10868,18 +11396,219 @@
                           },
                           "parameters": [
                             "marcus2",
-                            "SmoothCamera",
-                            "yes"
+                            "TopDownMultitouchMapper",
+                            ""
                           ]
                         },
                         {
                           "type": {
-                            "value": "ActivateBehavior"
+                            "value": "Wait"
                           },
                           "parameters": [
-                            "camera1",
-                            "SmoothCamera",
-                            "no"
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "putih2",
+                            "Tween",
+                            "\"1\"",
+                            "255",
+                            "\"linear\"",
+                            "0.5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "putih2",
+                            "Tween",
+                            "\"3\"",
+                            "0",
+                            "\"linear\"",
+                            "0.5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "teks3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "level3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "tekslevel3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "tekslevel3",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Tween::HasFinished"
+                              },
+                              "parameters": [
+                                "putih2",
+                                "Tween",
+                                "\"3\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "marcus2",
+                                "SmoothCamera",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "marcus2",
+                                "TopDownMultitouchMapper",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "marcus2",
+                                "TopDownMovement",
+                                "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "camera2",
+                                "SmoothCamera",
+                                "no"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "global.level[1]",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"game\"",
+                                "\"game\"",
+                                "ToJSON(global)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "global.level[1]",
+                            ">",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "rumput3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "teks3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "level3",
+                            ""
                           ]
                         }
                       ]
@@ -10887,12 +11616,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -10994,12 +11717,49 @@
                   "parameters": [
                     "NewSprite",
                     "Tween",
-                    "\"1\"",
+                    "\"transition\"",
                     "0",
                     "900",
                     "\"linear\"",
                     "1",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "Tween",
+                    "\"transition\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "bg",
+                    "=",
+                    "marcus2.ZOrder() - 100000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "ysort",
+                    "=",
+                    "ysort.CenterY()"
                   ]
                 }
               ]
@@ -11065,10 +11825,33 @@
               ]
             },
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "marcus2",
+                    "NewSprite7",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "marcus2",
+                    "NewSprite7",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -11083,7 +11866,7 @@
               "parameters": [
                 "NewSprite",
                 "Tween",
-                "\"1\""
+                "\"transition\""
               ]
             }
           ],
@@ -11094,7 +11877,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "mov marcus",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -11528,6 +12310,7 @@
                   ]
                 },
                 {
+                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -11845,7 +12628,7 @@
                       },
                       "parameters": [
                         "marcus2",
-                        "PATUNG",
+                        "NewSprite2",
                         "",
                         "",
                         ""
@@ -11872,7 +12655,7 @@
                       },
                       "parameters": [
                         "marcus2",
-                        "PATUNG",
+                        "NewSprite2",
                         "",
                         "",
                         ""
@@ -12014,6 +12797,59 @@
               }
             }
           ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Layer",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
@@ -12107,7 +12943,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.46331118245140324,
+        "zoomFactor": 0.3673257545058865,
         "windowMask": false
       },
       "objectsGroups": [
@@ -14782,31 +15618,10 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "awal",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ClampCamera"
-                  },
-                  "parameters": [
-                    "",
-                    "bg.X()",
-                    "bg.Y()",
-                    "bg.X() + bg.Width()",
-                    "bg.Y() + bg.Height()",
-                    "",
-                    ""
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -14820,6 +15635,26 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "ReadStringFromStorage"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "",
+                    "tempload"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "tempload",
+                    "global"
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetNumberVariable"
@@ -15013,6 +15848,26 @@
                   },
                   "parameters": [
                     "TEKS_AWAL",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ClampCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "bg.X()",
+                    "bg.Y()",
+                    "bg.X() + bg.Width()",
+                    "bg.Y() + bg.Height()",
+                    "",
                     ""
                   ]
                 }
@@ -15942,7 +16797,18 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeLayerTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "1"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -16136,7 +17002,18 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeLayerTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "0"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -16325,7 +17202,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Targetmonyet",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -16874,6 +17750,14 @@
                 },
                 {
                   "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "nilai"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -16979,14 +17863,6 @@
                     "NewTiledSprite2",
                     "ButtonFSM",
                     "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "nilai"
                   ]
                 },
                 {
@@ -17116,6 +17992,26 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "global.level[0]",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "ToJSON(global)"
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
@@ -17127,9 +18023,19 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "level",
+                "point",
                 "=",
-                "1"
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "collect",
+                "=",
+                "0"
               ]
             },
             {
@@ -17140,16 +18046,6 @@
                 "",
                 "\"level\"",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "point",
-                "=",
-                "0"
               ]
             }
           ]
@@ -20445,7 +21341,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Awal",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -20465,10 +21360,40 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ReadStringFromStorage"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "",
+                    "tempload"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "tempload",
+                    "global"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
                     "ulangi",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "next",
                     "ButtonFSM",
                     ""
                   ]
@@ -21647,7 +22572,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Pause",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -21667,7 +22591,18 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeLayerTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "1"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -21881,7 +22816,18 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeLayerTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "0"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -22101,7 +23047,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "TargetBuaya",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22693,6 +23638,14 @@
                 },
                 {
                   "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "nilai"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -22807,14 +23760,6 @@
                     "awan",
                     "ButtonFSM",
                     "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "nilai"
                   ]
                 },
                 {
@@ -22944,30 +23889,30 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "global.level[1]",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "ToJSON(global)"
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
                 "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "level",
-                "=",
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"level\"",
-                ""
               ]
             },
             {
@@ -22988,6 +23933,16 @@
                 "collect",
                 "=",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"level\"",
+                ""
               ]
             }
           ]
@@ -23464,7 +24419,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5290357402156931,
+        "zoomFactor": 0.1500267925502581,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -23687,7 +24642,7 @@
           "width": 0,
           "x": 512,
           "y": 433,
-          "zOrder": 40,
+          "zOrder": 70,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -23917,7 +24872,7 @@
           "name": "tapmatsinga",
           "persistentUuid": "87c2d167-acf5-4c37-9f34-53a0b37fcfac",
           "width": 0,
-          "x": 0,
+          "x": 3,
           "y": -2889,
           "zOrder": 10,
           "numberProperties": [],
@@ -24986,6 +25941,105 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 795,
+          "layer": "",
+          "name": "menangputih",
+          "opacity": 0,
+          "persistentUuid": "e3cf0c72-202e-456e-8b78-ef732e157017",
+          "width": 1280,
+          "x": 1,
+          "y": -2949,
+          "zOrder": 83,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 316,
+          "keepRatio": true,
+          "layer": "",
+          "name": "singamenang",
+          "persistentUuid": "7b428b2d-da72-4c51-b1d8-3956c10a6cb8",
+          "width": 498,
+          "x": 62,
+          "y": -2654,
+          "zOrder": 84,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "teksmenang",
+          "persistentUuid": "d8428744-8ba4-4609-895d-5fa279b38578",
+          "width": 0,
+          "x": 571,
+          "y": -2669,
+          "zOrder": 85,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "lamp",
+          "persistentUuid": "97f91081-3331-438f-a623-5e95c33e4acb",
+          "width": 0,
+          "x": 174,
+          "y": -2814,
+          "zOrder": 86,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "next",
+          "persistentUuid": "dc3ee491-4bde-4087-a42c-f14152977550",
+          "width": 0,
+          "x": 1066,
+          "y": -2263,
+          "zOrder": 87,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1509,
+          "keepRatio": true,
+          "layer": "",
+          "name": "lobby",
+          "persistentUuid": "2d9bcbd9-46b5-44ae-b894-c4a94fd768b9",
+          "width": 1333,
+          "x": -50,
+          "y": -2769,
+          "zOrder": 88,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -25254,7 +26308,13 @@
           "name": "batu",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "id",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -25263,6 +26323,10 @@
               "canBeGrabbed": true,
               "platformType": "NormalPlatform",
               "yGrabOffset": 0
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
             }
           ],
           "animations": [
@@ -27074,14 +28138,22 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "tapmatsinga",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -27117,12 +28189,16 @@
                             "y": 599
                           },
                           {
-                            "x": 1280,
-                            "y": 801
+                            "x": 1275,
+                            "y": 660
                           },
                           {
-                            "x": 591,
-                            "y": 801
+                            "x": 1231.5,
+                            "y": 633
+                          },
+                          {
+                            "x": 601.5,
+                            "y": 620.5
                           }
                         ]
                       ]
@@ -27340,7 +28416,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -27388,7 +28464,7 @@
               ]
             },
             {
-              "name": "",
+              "name": "2",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -28262,6 +29338,174 @@
             "lineHeight": 0,
             "color": "255;255;255"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "singamenang",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "lion.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 5
+                          },
+                          {
+                            "x": 175,
+                            "y": 5
+                          },
+                          {
+                            "x": 175,
+                            "y": 130
+                          },
+                          {
+                            "x": 2,
+                            "y": 130
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "teksmenang",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "\"Tahukah Kamu ? Auman\nseekor singa jantan sangat \nkeras, bisa terdengar hingga\njarak8 kilometerjauhnya!\" ",
+          "font": "Minecraft.ttf",
+          "textAlignment": "left",
+          "characterSize": 50,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 10,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "\"Tahukah Kamu ? Auman\nseekor singa jantan sangat \nkeras, bisa terdengar hingga\njarak8 kilometerjauhnya!\" ",
+            "font": "Minecraft.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 50,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "lobby",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "lobby.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 511
+                          },
+                          {
+                            "x": 1280,
+                            "y": 511
+                          },
+                          {
+                            "x": 1280,
+                            "y": 1440
+                          },
+                          {
+                            "x": 0,
+                            "y": 1440
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -28310,6 +29554,12 @@
             "objectName": "tapmatsinga"
           },
           {
+            "objectName": "singamenang"
+          },
+          {
+            "objectName": "teksmenang"
+          },
+          {
             "objectName": "trap"
           },
           {
@@ -28353,6 +29603,9 @@
           },
           {
             "objectName": "nilaikalah"
+          },
+          {
+            "objectName": "lobby"
           }
         ]
       },
@@ -28362,6 +29615,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Beginning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28379,6 +29633,36 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "ReadStringFromStorage"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "",
+                    "tempload"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "tempload",
+                    "global"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "next",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetNumberVariable"
@@ -28427,6 +29711,46 @@
                   },
                   "parameters": [
                     "nilaikalah"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "teksmenang"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "singamenang"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "lamp"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "next"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "lobby"
                   ]
                 },
                 {
@@ -31278,6 +32602,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Pause",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -31731,6 +33056,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "TargetSinga",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -32155,6 +33481,14 @@
                 },
                 {
                   "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ShowLayer"
                   },
                   "parameters": [
@@ -32264,11 +33598,24 @@
                     "PlatformerObject",
                     "yes"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                  },
+                  "parameters": [
+                    "batu",
+                    "Tween",
+                    "\"\"",
+                    "320",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
                 }
               ]
             },
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -32315,10 +33662,18 @@
                 },
                 {
                   "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "nilai"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
-                    "MONYET",
+                    "lion",
                     ""
                   ]
                 },
@@ -32327,7 +33682,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "pisang",
+                    "pangan",
                     ""
                   ]
                 },
@@ -32346,6 +33701,15 @@
                   },
                   "parameters": [
                     "daginglempar",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "batu",
                     ""
                   ]
                 },
@@ -32414,24 +33778,6 @@
                 },
                 {
                   "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "NewTiledSprite2",
-                    "ButtonFSM",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "nilai"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Montre"
                   },
                   "parameters": [
@@ -32444,7 +33790,7 @@
                     "value": "Montre"
                   },
                   "parameters": [
-                    "teksketerangan_monyet",
+                    "teksmenang",
                     ""
                   ]
                 },
@@ -32462,7 +33808,7 @@
                     "value": "Montre"
                   },
                   "parameters": [
-                    "monyet2",
+                    "singamenang",
                     ""
                   ]
                 },
@@ -32493,6 +33839,126 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "next",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "lamp"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "teksmenang"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "singamenang"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "next"
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "lobby",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+              },
+              "parameters": [
+                "lobby",
+                "Tween",
+                "\"\"",
+                "-3600",
+                "\"linear\"",
+                "1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "ToJSON(global)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "point",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "collect",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"win all\"",
+                ""
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32834,6 +34300,1654 @@
         {
           "name": "ShakeObject_PositionAngleScale",
           "type": "ShakeObject::ShakeObject_PositionAngleScale"
+        },
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+        },
+        {
+          "name": "TopDownMultitouchMapper",
+          "type": "SpriteMultitouchJoystick::TopDownMultitouchMapper"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "win_32all",
+      "name": "win all",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.35534345588169863,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "bbdd6744-1d8c-48fa-b4eb-b7fa3fd5dcf8",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "59a6b7cd-3667-4fc3-b848-dcc74b3f983a",
+          "width": 0,
+          "x": -334,
+          "y": 389,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite4",
+          "persistentUuid": "1fcd2d0d-a24c-43b6-ac61-3a838b024ff9",
+          "width": 0,
+          "x": 1323,
+          "y": 302,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 235,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite3",
+          "persistentUuid": "0324da97-0e9c-450e-974f-8f43a3d68758",
+          "width": 614,
+          "x": 1375,
+          "y": 509,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1319,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite5",
+          "persistentUuid": "c6b838a3-5473-4219-ae50-d9074904b0b1",
+          "width": 960,
+          "x": 157,
+          "y": -221,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 348,
+          "keepRatio": true,
+          "layer": "",
+          "name": "selamat",
+          "persistentUuid": "c8225fc1-2207-4fe9-934b-bbe8c3f7db43",
+          "width": 828,
+          "x": 253,
+          "y": 959,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 13,
+          "customSize": true,
+          "depth": 1,
+          "height": 136,
+          "keepRatio": true,
+          "layer": "",
+          "name": "iknn",
+          "persistentUuid": "ac63f833-a93d-46b5-90ea-e412e688808c",
+          "width": 125,
+          "x": 1391,
+          "y": -6,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 338,
+          "customSize": true,
+          "depth": 1,
+          "height": 104,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pisanggg",
+          "persistentUuid": "83fba3a7-adb7-4a39-85a5-874c368c4cd6",
+          "width": 117,
+          "x": 234,
+          "y": -276,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 18,
+          "customSize": true,
+          "depth": 1,
+          "height": 188,
+          "keepRatio": true,
+          "layer": "",
+          "name": "daging",
+          "persistentUuid": "0ebffc95-4d4c-4d95-9c93-9de45b0ca1a8",
+          "width": 178,
+          "x": 950,
+          "y": -312,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 344,
+          "customSize": true,
+          "depth": 1,
+          "height": 133,
+          "keepRatio": true,
+          "layer": "",
+          "name": "pangannn",
+          "persistentUuid": "1f47bf38-a0e3-405b-944d-13562618c257",
+          "width": 131,
+          "x": -209,
+          "y": 208,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "next",
+          "persistentUuid": "cc240291-b1c7-4634-9bbb-0fbfe9406e3a",
+          "width": 0,
+          "x": 1097,
+          "y": 628,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "bg.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 720
+                          },
+                          {
+                            "x": 0,
+                            "y": 720
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "monyet.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 320,
+                            "y": 0
+                          },
+                          {
+                            "x": 320,
+                            "y": 320
+                          },
+                          {
+                            "x": 0,
+                            "y": 320
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite3",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "buaya.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 4
+                          },
+                          {
+                            "x": 348,
+                            "y": 4
+                          },
+                          {
+                            "x": 348,
+                            "y": 100
+                          },
+                          {
+                            "x": 0,
+                            "y": 100
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite4",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "singa.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 6,
+                            "y": 16
+                          },
+                          {
+                            "x": 294,
+                            "y": 16
+                          },
+                          {
+                            "x": 294,
+                            "y": 370
+                          },
+                          {
+                            "x": 6,
+                            "y": 370
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite5",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "judul1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 56,
+                            "y": 56
+                          },
+                          {
+                            "x": 168,
+                            "y": 56
+                          },
+                          {
+                            "x": 168,
+                            "y": 219
+                          },
+                          {
+                            "x": 56,
+                            "y": 219
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "selamat",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat 10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "pangannn",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseMovement",
+              "type": "EllipseMovement::EllipseMovement",
+              "RadiusX": 0,
+              "RadiusY": 3,
+              "LoopDuration": 3,
+              "InitialTurningLeft": false,
+              "InitialDirectionAngle": 0,
+              "ShouldRotate": false,
+              "RotationOffset": 0,
+              "CenterX": 0,
+              "CenterY": 0,
+              "MovementAngle": 0,
+              "OldX": 2.0247e-320,
+              "OldY": 2.0247e-320
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pangan 5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 5
+                          },
+                          {
+                            "x": 56,
+                            "y": 5
+                          },
+                          {
+                            "x": 56,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "daging",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseMovement",
+              "type": "EllipseMovement::EllipseMovement",
+              "RadiusX": 0,
+              "RadiusY": 3,
+              "LoopDuration": 3,
+              "InitialTurningLeft": false,
+              "InitialDirectionAngle": 0,
+              "ShouldRotate": false,
+              "RotationOffset": 0,
+              "CenterX": 0,
+              "CenterY": 0,
+              "MovementAngle": 0,
+              "OldX": 2.0247e-320,
+              "OldY": 2.0247e-320
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "daging_pilih.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 17,
+                            "y": 21
+                          },
+                          {
+                            "x": 70,
+                            "y": 21
+                          },
+                          {
+                            "x": 70,
+                            "y": 65
+                          },
+                          {
+                            "x": 17,
+                            "y": 65
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "pisanggg",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseMovement",
+              "type": "EllipseMovement::EllipseMovement",
+              "RadiusX": 0,
+              "RadiusY": 3,
+              "LoopDuration": 3,
+              "InitialTurningLeft": false,
+              "InitialDirectionAngle": 0,
+              "ShouldRotate": false,
+              "RotationOffset": 0,
+              "CenterX": 0,
+              "CenterY": 0,
+              "MovementAngle": 0,
+              "OldX": 2.0247e-320,
+              "OldY": 2.0247e-320
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "pisang_pilih.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 3
+                          },
+                          {
+                            "x": 57,
+                            "y": 3
+                          },
+                          {
+                            "x": 57,
+                            "y": 59
+                          },
+                          {
+                            "x": 2,
+                            "y": 59
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "iknn",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseMovement",
+              "type": "EllipseMovement::EllipseMovement",
+              "RadiusX": 0,
+              "RadiusY": 3,
+              "LoopDuration": 3,
+              "InitialTurningLeft": false,
+              "InitialDirectionAngle": 0,
+              "ShouldRotate": false,
+              "RotationOffset": 0,
+              "CenterX": 0,
+              "CenterY": 0,
+              "MovementAngle": 0,
+              "OldX": 2.0247e-320,
+              "OldY": 2.0247e-320
+            },
+            {
+              "isFolded": true,
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "13.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 5,
+                            "y": 9
+                          },
+                          {
+                            "x": 56,
+                            "y": 9
+                          },
+                          {
+                            "x": 56,
+                            "y": 60
+                          },
+                          {
+                            "x": 5,
+                            "y": 60
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewSprite"
+          },
+          {
+            "objectName": "NewSprite2"
+          },
+          {
+            "objectName": "NewSprite3"
+          },
+          {
+            "objectName": "NewSprite4"
+          },
+          {
+            "objectName": "NewSprite5"
+          },
+          {
+            "objectName": "pangannn"
+          },
+          {
+            "objectName": "daging"
+          },
+          {
+            "objectName": "pisanggg"
+          },
+          {
+            "objectName": "iknn"
+          },
+          {
+            "objectName": "selamat"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "NewSprite2",
+                "Tween",
+                "\"\"",
+                "-1",
+                "398",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "NewSprite4",
+                "Tween",
+                "\"\"",
+                "990",
+                "306",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "NewSprite3",
+                "Tween",
+                "\"\"",
+                "937",
+                "535",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "NewSprite5",
+                "Tween",
+                "\"\"",
+                "157",
+                "-221",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "selamat",
+                "Tween",
+                "\"\"",
+                "226",
+                "407",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "daging",
+                "Tween",
+                "\"1\"",
+                "906",
+                "93",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "pisanggg",
+                "Tween",
+                "\"\"",
+                "262",
+                "83",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "pangannn",
+                "Tween",
+                "\"\"",
+                "150",
+                "300",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "iknn",
+                "Tween",
+                "\"\"",
+                "1078",
+                "251",
+                "\"easeOutQuint\"",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "next",
+                "ButtonFSM",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "next"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "next",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "next",
+                "ButtonFSM",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "next",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "global.endgame",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"level\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "EllipseMovement",
+          "type": "EllipseMovement::EllipseMovement"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerCharacterAnimator",
+          "type": "PlatformerCharacterAnimator::PlatformerCharacterAnimator"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
         },
         {
           "name": "SmoothCamera",
