@@ -1769,6 +1769,26 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "Jatoh ke air.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Jatoh ke air.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "BGM - Level 3.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "BGM - Level 3.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3488,7 +3508,17 @@
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "BlackAndWhite",
+          "name": "Effect",
+          "doubleParameters": {
+            "opacity": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [
         {
           "name": "ButtonFSM",
@@ -3562,7 +3592,7 @@
         {
           "name": "click",
           "type": "boolean",
-          "value": true
+          "value": false
         }
       ],
       "effects": [],
@@ -3691,7 +3721,7 @@
         {
           "name": "click",
           "type": "boolean",
-          "value": true
+          "value": false
         }
       ],
       "effects": [],
@@ -5065,6 +5095,21 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "suara2",
+      "type": "SpriteToggleSwitch::SpriteToggleSwitch",
+      "variant": "soundco",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {}
     }
   ],
   "objectsFolderStructure": {
@@ -5141,6 +5186,9 @@
       },
       {
         "objectName": "Top_arrow_round_button"
+      },
+      {
+        "objectName": "suara2"
       }
     ]
   },
@@ -5225,6 +5273,21 @@
       "name": "tempload",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "teks",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ismutelagu",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ismutelagusuara",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -6963,6 +7026,16 @@
                 "\"level\"",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "teks",
+                "=",
+                "1"
+              ]
             }
           ]
         }
@@ -7120,7 +7193,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4057518905943923,
+        "zoomFactor": 0.34375202416123973,
         "windowMask": false
       },
       "objectsGroups": [
@@ -11395,6 +11468,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "beginning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11634,6 +11708,7 @@
                   "comment": "ANIMASI Level 2 kebuka"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11959,6 +12034,7 @@
                   "comment": "ANIMASI Level 3 kebuka"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12270,6 +12346,37 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "teks",
+                        "!=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "twka_menuju_hutan",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
                 }
               ]
             },
@@ -13894,7 +14001,7 @@
           "isLocked": false,
           "name": "bg",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
@@ -14009,9 +14116,9 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
-          "name": "Layer",
+          "name": "teks",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
@@ -14196,7 +14303,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.0615714305220123,
+        "zoomFactor": 0.7876290101673874,
         "windowMask": false
       },
       "objectsGroups": [
@@ -15332,12 +15439,12 @@
           "height": 0,
           "keepRatio": true,
           "layer": "ui",
-          "name": "lagu",
-          "persistentUuid": "9122f258-91f6-41ce-bb21-11e47dfea660",
+          "name": "suara2",
+          "persistentUuid": "7a6b9339-d384-4c82-bfb7-5ecbcce652fa",
           "width": 0,
-          "x": 49,
-          "y": 47,
-          "zOrder": 101,
+          "x": 41,
+          "y": 30,
+          "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -15348,11 +15455,11 @@
           "height": 0,
           "keepRatio": true,
           "layer": "ui",
-          "name": "suara",
-          "persistentUuid": "26428404-b673-4fab-94fc-9e398894b2e5",
+          "name": "lagu2",
+          "persistentUuid": "836d1538-a22a-4c6e-bcdb-76f569b2b177",
           "width": 0,
-          "x": 49,
-          "y": 46,
+          "x": 37,
+          "y": 31,
           "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
@@ -16840,6 +16947,21 @@
             "lineHeight": 0,
             "color": "255;255;255"
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "lagu2",
+          "type": "SpriteToggleSwitch::SpriteToggleSwitch",
+          "variant": "cobalagi",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "content": {}
         }
       ],
       "objectsFolderStructure": {
@@ -16910,6 +17032,9 @@
           },
           {
             "objectName": "teksketerangan_monyet"
+          },
+          {
+            "objectName": "lagu2"
           }
         ]
       },
@@ -17028,6 +17153,16 @@
                 },
                 {
                   "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Cache"
                   },
                   "parameters": [
@@ -17105,18 +17240,7 @@
                     "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
-                    "lagu",
-                    "Opacity",
-                    "=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "OpacityCapability::OpacityBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "suara",
+                    "suara2",
                     "Opacity",
                     "=",
                     "0"
@@ -17170,22 +17294,29 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
-                    "lagu",
+                    "suara2",
                     "ButtonFSM",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "ActivateBehavior"
+                    "value": "DebuggerTools::EnableDebugDraw"
                   },
                   "parameters": [
-                    "suara",
-                    "ButtonFSM",
+                    "",
+                    "",
+                    "",
+                    "",
                     ""
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -17231,13 +17362,22 @@
               "actions": [
                 {
                   "type": {
-                    "value": "DebuggerTools::EnableDebugDraw"
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
-                    "",
-                    "",
-                    "",
-                    "",
+                    "lagu2",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "lagu2",
+                    "ButtonFSM",
                     ""
                   ]
                 }
@@ -17502,19 +17642,6 @@
                     "PlatformerObject",
                     "\"Right\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Walk.wav",
-                    "2",
-                    "",
-                    "100",
-                    "1"
-                  ]
                 }
               ],
               "events": [
@@ -17532,7 +17659,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -18130,6 +18271,16 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "ulangi",
                     "ButtonFSM",
                     "yes"
@@ -18210,6 +18361,16 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
                 {
                   "type": {
                     "value": "ActivateBehavior"
@@ -18562,7 +18723,264 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "setting1",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "setting1",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "NewText",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "settings2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "pause_screen",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "setting1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "suara2",
+                    "Tween",
+                    "\"suara2\"",
+                    "setting1.X() + 50",
+                    "setting1.Y() + 220",
+                    "\"easeInQuad\"",
+                    "0.3",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "lagu2",
+                    "Tween",
+                    "\"suara2\"",
+                    "setting1.X() + 50",
+                    "setting1.Y() + 150",
+                    "\"easeInQuad\"",
+                    "0.3",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "lagu2",
+                    "Tween",
+                    "\"\"",
+                    "255",
+                    "\"easeOutQuad\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "suara2",
+                    "Tween",
+                    "\"\"",
+                    "255",
+                    "\"easeOutQuad\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerCharacterAnimator",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "TopDownMovement",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "TopDownMultitouchMapper",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "suara2",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "lagu2",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "settings2",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    "no"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "ismutelagusuara",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Click.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -18586,10 +19004,57 @@
                     "",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "settings2",
+                    "ButtonFSM",
+                    "no"
+                  ]
                 }
               ],
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "ismutelagusuara",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Click.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -18631,7 +19096,7 @@
                         "value": "Tween::TweenBehavior::AddObjectPositionTween2"
                       },
                       "parameters": [
-                        "suara",
+                        "suara2",
                         "Tween",
                         "\"suara2\"",
                         "40",
@@ -18646,9 +19111,9 @@
                         "value": "Tween::TweenBehavior::AddObjectPositionTween2"
                       },
                       "parameters": [
-                        "lagu",
+                        "lagu2",
                         "Tween",
-                        "\"suara\"",
+                        "\"suara2\"",
                         "40",
                         "35",
                         "\"easeInQuad\"",
@@ -18661,7 +19126,7 @@
                         "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
-                        "suara",
+                        "suara2",
                         "Tween",
                         "\"\"",
                         "0",
@@ -18675,7 +19140,7 @@
                         "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
-                        "lagu",
+                        "lagu2",
                         "Tween",
                         "\"\"",
                         "0",
@@ -18729,39 +19194,9 @@
                         "value": "ActivateBehavior"
                       },
                       "parameters": [
-                        "lagu",
-                        "ButtonFSM",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "suara",
-                        "ButtonFSM",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
                         "setting1",
                         "ButtonFSM",
                         "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "settings2",
-                        "ButtonFSM",
-                        "no"
                       ]
                     },
                     {
@@ -18797,6 +19232,7 @@
                   ],
                   "events": [
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -18804,266 +19240,9 @@
                             "value": "Tween::Exists"
                           },
                           "parameters": [
-                            "suara",
+                            "suara2",
                             "Tween",
-                            "\"suara2\""
-                          ]
-                        }
-                      ],
-                      "actions": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "ButtonStates::ButtonFSM::IsClicked"
-                  },
-                  "parameters": [
-                    "setting1",
-                    "ButtonFSM",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ChangeLayerTimeScale"
-                  },
-                  "parameters": [
-                    "",
-                    "",
-                    "0"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "NewText",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "settings2",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "pause_screen",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "setting1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                      },
-                      "parameters": [
-                        "suara",
-                        "Tween",
-                        "\"suara\"",
-                        "setting1.X() + 50",
-                        "setting1.Y() + 220",
-                        "\"easeInQuad\"",
-                        "0.3",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                      },
-                      "parameters": [
-                        "lagu",
-                        "Tween",
-                        "\"suara\"",
-                        "setting1.X() + 50",
-                        "setting1.Y() + 150",
-                        "\"easeInQuad\"",
-                        "0.3",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "lagu",
-                        "Tween",
-                        "\"\"",
-                        "255",
-                        "\"easeOutQuad\"",
-                        "1",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "suara",
-                        "Tween",
-                        "\"\"",
-                        "255",
-                        "\"easeOutQuad\"",
-                        "1",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "bolang",
-                        "PlatformerObject",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "bolang",
-                        "PlatformerCharacterAnimator",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "bolang",
-                        "TopDownMovement",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "bolang",
-                        "TopDownMultitouchMapper",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "setting1",
-                        "ButtonFSM",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "settings2",
-                        "ButtonFSM",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "lagu",
-                        "ButtonFSM",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "suara",
-                        "ButtonFSM",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "Right_arrow_round_button",
-                        "ButtonFSM",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "Top_arrow_round_button",
-                        "ButtonFSM",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "Left_arrow_round_button",
-                        "ButtonFSM",
-                        "no"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Tween::Exists"
-                          },
-                          "parameters": [
-                            "suara",
-                            "Tween",
-                            "\"suara\""
+                            "\"suara22\""
                           ]
                         }
                       ],
@@ -19081,7 +19260,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Targetmonyet",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -19140,6 +19318,36 @@
                     "Animation",
                     "=",
                     "\"diemkanan\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
                   ]
                 },
                 {
@@ -19221,18 +19429,43 @@
                         "collect",
                         "0"
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "PlaySoundCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "Lempar Item.wav",
-                        "2",
-                        "",
-                        "100",
-                        "1"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "ismutelagusuara",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "Lempar Item.wav",
+                            "2",
+                            "",
+                            "100",
+                            "1"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -19317,18 +19550,43 @@
                         "collect",
                         "0"
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "PlaySoundCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "Lempar Item.wav",
-                        "2",
-                        "",
-                        "100",
-                        "1"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "ismutelagusuara",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "Lempar Item.wav",
+                            "2",
+                            "",
+                            "100",
+                            "1"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -19342,7 +19600,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -19395,10 +19652,16 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "step",
+                        "ismutelagusuara",
                         "=",
-                        "3"
+                        "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -19413,6 +19676,53 @@
                         "",
                         "100",
                         "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "step",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Top_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
                       ]
                     },
                     {
@@ -19620,6 +19930,36 @@
                     "PlatformerObject",
                     "yes"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
                 }
               ]
             },
@@ -19636,6 +19976,16 @@
                     "",
                     "",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "ismutelagusuara",
+                    "=",
+                    "0"
                   ]
                 }
               ],
@@ -19666,6 +20016,19 @@
                     "\"linear\"",
                     "0.2",
                     "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Transisi Loading.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
                   ]
                 },
                 {
@@ -19744,7 +20107,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "lagu",
+                    "lagu2",
                     ""
                   ]
                 },
@@ -19753,7 +20116,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "suara",
+                    "suara2",
                     ""
                   ]
                 },
@@ -19882,6 +20245,591 @@
                     "0.5",
                     "no"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Transisi Loading.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Click Other",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": true,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenChecked"
+                  },
+                  "parameters": [
+                    "suara2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "suara2",
+                    "click",
+                    "True",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ismutelagusuara",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "suara2",
+                        "click",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "suara2",
+                        "Animation",
+                        "=",
+                        "\" 2\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "suara2",
+                        "click",
+                        "True",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "suara2",
+                        "Animation",
+                        "=",
+                        "\"1\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "ismutelagusuara",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "ismutelagusuara",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Click.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "lagu2",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "lagu2",
+                    "click",
+                    "Toggle",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ismutelagu2",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lagu2",
+                        "click",
+                        "True",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "lagu2",
+                        "Animation",
+                        "=",
+                        "\"1\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "ismutelagu2",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "StopSoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "2"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lagu2",
+                        "click",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "lagu2",
+                        "Animation",
+                        "=",
+                        "\"2\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "ismutelagu2",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "RePlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "ismutelagusuara",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"level\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "next",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "ismutelagusuara",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "lamp"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "teksketerangan_monyet"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "monyet2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "next"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "menangputih",
+                    "Tween",
+                    "\"4\"",
+                    "255",
+                    "\"linear\"",
+                    "0.2",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "global.level[0]",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(global)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "point",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "collect",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "teks",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"level\"",
+                    ""
+                  ]
                 }
               ]
             }
@@ -19893,11 +20841,10 @@
           "conditions": [
             {
               "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
+                "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenToggled"
               },
               "parameters": [
-                "next",
-                "ButtonFSM",
+                "lagu2",
                 ""
               ]
             }
@@ -19905,282 +20852,12 @@
           "actions": [
             {
               "type": {
-                "value": "Cache"
+                "value": "DebuggerTools::ConsoleLog"
               },
               "parameters": [
-                "lamp"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "teksketerangan_monyet"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "monyet2"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "next"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "menangputih",
-                "Tween",
-                "\"4\"",
-                "255",
-                "\"linear\"",
-                "0.2",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "global.level[0]",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "EcrireFichierTxt"
-              },
-              "parameters": [
-                "\"game\"",
-                "\"game\"",
-                "ToJSON(global)"
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "point",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "collect",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"level\"",
+                "\"tes\"",
+                "\"info\"",
                 ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
-              },
-              "parameters": [
-                "lagu",
-                "ButtonFSM",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "lagu",
-                "click",
-                "Toggle",
-                "0"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "lagu",
-                    "click",
-                    "True",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "lagu",
-                    "Animation",
-                    "=",
-                    "\"2\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "lagu",
-                    "click",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "lagu",
-                    "Animation",
-                    "=",
-                    "\"1\""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
-              },
-              "parameters": [
-                "suara",
-                "ButtonFSM",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "suara",
-                "click",
-                "Toggle",
-                "0"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "suara",
-                    "click",
-                    "True",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "suara",
-                    "Animation",
-                    "=",
-                    "\"2\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "suara",
-                    "click",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "suara",
-                    "Animation",
-                    "=",
-                    "\"1\""
-                  ]
-                }
               ]
             }
           ]
@@ -20200,7 +20877,7 @@
           "isLocked": false,
           "name": "",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [
             {
               "defaultSize": true,
@@ -20316,6 +20993,59 @@
           "isLightingLayer": false,
           "isLocked": false,
           "name": "button",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "ui",
           "renderingType": "",
           "visibility": true,
           "cameras": [],
@@ -20515,59 +21245,6 @@
               }
             }
           ]
-        },
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "ui",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "name": "3D Ambient Hemisphere Light",
-              "doubleParameters": {
-                "elevation": 40,
-                "intensity": 0.33,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "groundColor": "127;127;127",
-                "skyColor": "255;255;255",
-                "top": "Z+"
-              },
-              "booleanParameters": {}
-            },
-            {
-              "effectType": "Scene3D::DirectionalLight",
-              "name": "3D Sun Light",
-              "doubleParameters": {
-                "distanceFromCamera": 1500,
-                "elevation": 40,
-                "frustumSize": 4000,
-                "intensity": 0.75,
-                "minimumShadowBias": 0,
-                "rotation": 300
-              },
-              "stringParameters": {
-                "color": "255;255;255",
-                "shadowQuality": "medium",
-                "top": "Z+"
-              },
-              "booleanParameters": {
-                "isCastingShadow": true
-              }
-            }
-          ]
         }
       ],
       "behaviorsSharedData": [
@@ -20665,7 +21342,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2817259932079587,
+        "zoomFactor": 0.4335774304702418,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -21573,6 +22250,55 @@
           "x": 4291,
           "y": 214,
           "zOrder": 45,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 159,
+          "layer": "button",
+          "name": "Top_arrow_round_button",
+          "persistentUuid": "0ef4238c-3c9d-44c7-8701-9f36c7e08761",
+          "width": 162,
+          "x": 1071,
+          "y": 540,
+          "zOrder": 46,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 159,
+          "layer": "button",
+          "name": "Left_arrow_round_button",
+          "persistentUuid": "8c7b1fc4-79d0-4c26-ad7f-6c3831c801c1",
+          "width": 162,
+          "x": 66,
+          "y": 540,
+          "zOrder": 47,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 159,
+          "keepRatio": true,
+          "layer": "button",
+          "name": "Right_arrow_round_button",
+          "persistentUuid": "0a743eec-3db2-4cc1-a455-e70284176071",
+          "width": 159,
+          "x": 313,
+          "y": 540,
+          "zOrder": 48,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -23568,9 +24294,9 @@
                   "parameters": [
                     "",
                     "BGM - Level 2.wav",
-                    "2",
+                    "1",
                     "yes",
-                    "100",
+                    "50",
                     "1"
                   ]
                 },
@@ -23590,6 +24316,16 @@
                   },
                   "parameters": [
                     "next",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "back",
                     "ButtonFSM",
                     ""
                   ]
@@ -23847,32 +24583,6 @@
                   },
                   "parameters": [
                     "",
-                    "\"Space\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PlatformBehavior::SimulateControl"
-                  },
-                  "parameters": [
-                    "bolang",
-                    "PlatformerObject",
-                    "\"Jump\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextPressed"
-                  },
-                  "parameters": [
-                    "",
                     "\"a\""
                   ]
                 }
@@ -23887,6 +24597,107 @@
                     "PlatformerObject",
                     "\"Left\""
                   ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Left\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
                 }
               ]
             },
@@ -23912,6 +24723,226 @@
                     "bolang",
                     "PlatformerObject",
                     "\"Right\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Right\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Space\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Jump\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Jump.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject",
+                    "\"Jump\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Jump.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -23950,6 +24981,16 @@
                   },
                   "parameters": [
                     "ulangi",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "back",
                     "ButtonFSM",
                     "yes"
                   ]
@@ -24042,9 +25083,59 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "bolang",
                     "PlatformerObject",
                     "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "bolang",
+                    "PlatformerObject",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
                   ]
                 },
                 {
@@ -24139,6 +25230,19 @@
                     "=",
                     "0"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
                 }
               ]
             },
@@ -24189,6 +25293,19 @@
                 },
                 {
                   "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Jatoh ke air.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Wait"
                   },
                   "parameters": [
@@ -24203,6 +25320,13 @@
                     "percikan",
                     ""
                   ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
                 }
               ]
             }
@@ -24614,6 +25738,19 @@
                     "+",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Collect Item.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
                 }
               ]
             },
@@ -24641,6 +25778,19 @@
                   "parameters": [
                     "ikan2",
                     "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Collect Item.wav",
+                    "2",
+                    "",
+                    "100",
                     "1"
                   ]
                 }
@@ -24795,6 +25945,19 @@
                   "parameters": [
                     "",
                     "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
                     "1"
                   ]
                 }
@@ -24964,6 +26127,36 @@
                         "ButtonFSM",
                         "no"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Top_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
                     }
                   ],
                   "events": [
@@ -25020,6 +26213,19 @@
                     "",
                     "",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
                   ]
                 }
               ],
@@ -25201,6 +26407,36 @@
                         "=",
                         "\"pause\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left_arrow_round_button",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right_arrow_round_button",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Top_arrow_round_button",
+                        "ButtonFSM",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
@@ -25242,7 +26478,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "TargetBuaya",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -25310,6 +26545,36 @@
                   "parameters": [
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -25338,6 +26603,19 @@
                         "bolang.X()",
                         "bolang.Y()",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Lempar Item.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
                       ]
                     },
                     {
@@ -25421,6 +26699,19 @@
                         "bolang.X()",
                         "bolang.Y()",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Lempar Item.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
                       ]
                     },
                     {
@@ -25536,6 +26827,19 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Portal Enter.mp3",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
@@ -25668,6 +26972,16 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "bolang",
                     "PlatformerObject",
                     "no"
@@ -25770,6 +27084,36 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "bolang",
                     "PlatformerCharacterAnimator",
                     "yes"
@@ -25834,10 +27178,32 @@
                 },
                 {
                   "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Transisi Loading.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Cache"
                   },
                   "parameters": [
                     "nilai"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"button\""
                   ]
                 },
                 {
@@ -26016,6 +27382,19 @@
                     "0.5",
                     "no"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Portal Enter.mp3",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
                 }
               ]
             }
@@ -26023,213 +27402,51 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
-              },
-              "parameters": [
-                "next",
-                "ButtonFSM",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "lamp"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "TEKSBUAYA"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "buayakalah"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "next"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "menangputih",
-                "Tween",
-                "\"4\"",
-                "255",
-                "\"linear\"",
-                "0.2",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "global.level[1]",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "EcrireFichierTxt"
-              },
-              "parameters": [
-                "\"game\"",
-                "\"game\"",
-                "ToJSON(global)"
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "point",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "collect",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"level\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Lempar Barang",
+          "name": "Click other",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "PathfindingBehavior::DestinationReached"
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
                   },
                   "parameters": [
-                    "pisangLempar",
-                    "Pathfinding"
+                    "suara",
+                    "ButtonFSM",
+                    ""
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "Delete"
+                    "value": "SetBooleanObjectVariable"
                   },
                   "parameters": [
-                    "pisangLempar",
-                    ""
+                    "suara",
+                    "click",
+                    "Toggle",
+                    "0"
                   ]
                 },
                 {
                   "type": {
-                    "value": "SetNumberVariable"
+                    "value": "PlaySoundCanal"
                   },
                   "parameters": [
-                    "pisang2",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PathfindingBehavior::DestinationReached"
-                  },
-                  "parameters": [
-                    "ikanLempar",
-                    "Pathfinding"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ikanLempar",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "step",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "pisang2",
-                    "+",
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
                     "1"
                   ]
                 }
@@ -26240,48 +27457,332 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberVariable"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "step",
-                        "=",
-                        "4"
+                        "suara",
+                        "click",
+                        "True",
+                        "1"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
-                        "portal",
-                        "Tween",
-                        "\"3\"",
-                        "255",
-                        "\"easeInQuad\"",
-                        "1",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "targetakmal",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "berimakan",
-                        ""
+                        "suara",
+                        "Animation",
+                        "=",
+                        "\"2\""
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "suara",
+                        "click",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "suara",
+                        "Animation",
+                        "=",
+                        "\"1\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "lagu",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "lagu",
+                    "click",
+                    "Toggle",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lagu",
+                        "click",
+                        "True",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "lagu",
+                        "Animation",
+                        "=",
+                        "\"2\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "lagu",
+                        "click",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "lagu",
+                        "Animation",
+                        "=",
+                        "\"1\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"level\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "next",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "lamp"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "TEKSBUAYA"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "buayakalah"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "next"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "menangputih",
+                    "Tween",
+                    "\"4\"",
+                    "255",
+                    "\"linear\"",
+                    "0.2",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "global.level[1]",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"game\"",
+                    "\"game\"",
+                    "ToJSON(global)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "point",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "collect",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"level\"",
+                    ""
                   ]
                 }
               ]
@@ -26322,6 +27823,59 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "button",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -26615,7 +28169,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4057518905943901,
+        "zoomFactor": 0.7130377630690526,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -28250,6 +29804,54 @@
           "x": -52,
           "y": -2546,
           "zOrder": 89,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 159,
+          "layer": "button",
+          "name": "Left_arrow_round_button",
+          "persistentUuid": "d5c7df39-54d4-4d9a-a586-fa3ab5d8f517",
+          "width": 162,
+          "x": 66,
+          "y": 540,
+          "zOrder": 90,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 159,
+          "layer": "button",
+          "name": "Right_arrow_round_button",
+          "persistentUuid": "2c864c56-19fd-418e-ae73-73fd9e04bcb0",
+          "width": 162,
+          "x": 313,
+          "y": 540,
+          "zOrder": 91,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 159,
+          "layer": "button",
+          "name": "Top_arrow_round_button",
+          "persistentUuid": "d6631388-b4b6-4a0f-b291-fc4d9bfdc6c6",
+          "width": 162,
+          "x": 1071,
+          "y": 540,
+          "zOrder": 92,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -31868,10 +33470,43 @@
                 },
                 {
                   "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "BGM - Level 3.mp3",
+                    "1",
+                    "yes",
+                    "50",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "back",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
                     "next",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "ulangi",
                     "ButtonFSM",
                     ""
                   ]
@@ -32114,6 +33749,107 @@
                     "\"Left\""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang2",
+                    "PlatformerObject",
+                    "\"Left\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
               ]
             },
             {
@@ -32140,6 +33876,107 @@
                     "\"Right\""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang2",
+                    "PlatformerObject",
+                    "\"Right\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Walk.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
               ]
             },
             {
@@ -32164,6 +34001,99 @@
                     "bolang2",
                     "PlatformerObject",
                     "\"Jump\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Jump.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::SimulateControl"
+                  },
+                  "parameters": [
+                    "bolang2",
+                    "PlatformerObject",
+                    "\"Jump\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Jump.wav",
+                        "2",
+                        "",
+                        "100",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -34073,6 +36003,36 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "lagu",
                     "ButtonFSM",
                     "no"
@@ -34218,6 +36178,19 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "no",
+                    "100",
+                    "1"
+                  ]
+                },
                 {
                   "type": {
                     "value": "HideLayer"
@@ -34664,6 +36637,19 @@
                     "+",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Collect Item.wav",
+                    "2",
+                    "no",
+                    "100",
+                    "1"
+                  ]
                 }
               ]
             },
@@ -34691,6 +36677,19 @@
                   "parameters": [
                     "ikan2",
                     "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Collect Item.wav",
+                    "2",
+                    "no",
+                    "100",
                     "1"
                   ]
                 }
@@ -34843,6 +36842,19 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "no",
+                    "100",
+                    "1"
+                  ]
+                },
                 {
                   "type": {
                     "value": "ChangeLayerTimeScale"
@@ -35009,6 +37021,36 @@
                         "ButtonFSM",
                         "no"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Top_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left_arrow_round_button",
+                        "ButtonFSM",
+                        "yes"
+                      ]
                     }
                   ],
                   "events": [
@@ -35057,6 +37099,19 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Click.wav",
+                    "2",
+                    "no",
+                    "100",
+                    "1"
+                  ]
+                },
                 {
                   "type": {
                     "value": "ChangeLayerTimeScale"
@@ -35236,6 +37291,36 @@
                         "=",
                         "\"pause\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Right_arrow_round_button",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Top_arrow_round_button",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Left_arrow_round_button",
+                        "ButtonFSM",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
@@ -35344,6 +37429,36 @@
                   "parameters": [
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -35372,6 +37487,19 @@
                         "bolang2.X()",
                         "bolang2.Y()",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Lempar Item.wav",
+                        "2",
+                        "no",
+                        "100",
+                        "1"
                       ]
                     },
                     {
@@ -35465,6 +37593,19 @@
                         "bolang2.X()",
                         "bolang2.Y()",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Lempar Item.wav",
+                        "2",
+                        "no",
+                        "100",
+                        "1"
                       ]
                     },
                     {
@@ -35592,6 +37733,19 @@
                         "\"easeInQuad\"",
                         "1",
                         "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "Portal Enter.mp3",
+                        "2",
+                        "no",
+                        "100",
+                        "1"
                       ]
                     },
                     {
@@ -35814,6 +37968,36 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "bolang2",
                     "PlatformerObject",
                     "yes"
@@ -35854,6 +38038,36 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Right_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Left_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Top_arrow_round_button",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                   },
                   "parameters": [
@@ -35882,10 +38096,32 @@
                 },
                 {
                   "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Transisi Loading.wav",
+                    "2",
+                    "no",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Cache"
                   },
                   "parameters": [
                     "nilai"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "nilai",
+                    "\"button\""
                   ]
                 },
                 {
@@ -36054,6 +38290,19 @@
                     "0.5",
                     "no"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Transisi Loading.wav",
+                    "2",
+                    "no",
+                    "100",
+                    "1"
+                  ]
                 }
               ]
             }
@@ -36075,6 +38324,19 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "Click.wav",
+                "2",
+                "no",
+                "100",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "Cache"
@@ -36199,8 +38461,43 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "back",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "Click.wav",
+                "2",
+                "no",
+                "100",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"level\"",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -36279,7 +38576,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
-          "name": "boundary",
+          "name": "button",
           "renderingType": "",
           "visibility": true,
           "cameras": [],
@@ -36765,6 +39062,22 @@
           "x": 1097,
           "y": 628,
           "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "loby",
+          "persistentUuid": "4be5bb5c-3dd5-4b6f-bc50-f70d77b30785",
+          "width": 0,
+          "x": 0,
+          "y": -660,
+          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -37804,6 +40117,71 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "loby",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "lobby.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 511
+                          },
+                          {
+                            "x": 1280,
+                            "y": 511
+                          },
+                          {
+                            "x": 1280,
+                            "y": 1440
+                          },
+                          {
+                            "x": 0,
+                            "y": 1440
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -37838,6 +40216,9 @@
           },
           {
             "objectName": "selamat"
+          },
+          {
+            "objectName": "loby"
           }
         ]
       },
@@ -37855,6 +40236,34 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ReadStringFromStorage"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "",
+                "tempload"
+              ]
+            },
+            {
+              "type": {
+                "value": "JSONToVariableStructure2"
+              },
+              "parameters": [
+                "tempload",
+                "global"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1.5"
+              ]
+            },
             {
               "type": {
                 "value": "Tween::TweenBehavior::AddObjectPositionTween2"
@@ -38064,6 +40473,16 @@
             },
             {
               "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"game\"",
+                "ToJSON(global)"
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
@@ -38073,6 +40492,39 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+              },
+              "parameters": [
+                "loby",
+                "Tween",
+                "\"aw\"",
+                "900",
+                "\"linear\"",
+                "1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -76732,12 +79184,432 @@
               "areaMinX": 0,
               "areaMinY": 0,
               "areaMinZ": 0,
-              "name": "suara",
+              "name": "cobalagi",
               "objects": [
                 {
                   "adaptCollisionMaskAutomatically": true,
                   "assetStoreId": "",
-                  "name": "suara",
+                  "name": "State",
+                  "type": "Sprite",
+                  "updateIfNotVisible": false,
+                  "variables": [],
+                  "effects": [],
+                  "behaviors": [
+                    {
+                      "name": "ButtonFSM",
+                      "type": "SpriteToggleSwitch::ButtonFSM",
+                      "ShouldCheckHovering": true,
+                      "State": "Idle",
+                      "TouchId": 0,
+                      "TouchIsInside": false,
+                      "MouseIsInside": false,
+                      "Index": 0
+                    },
+                    {
+                      "name": "SwitchFSM",
+                      "type": "SpriteToggleSwitch::SwitchFSM",
+                      "ButtonFSM": "ButtonFSM",
+                      "IsChecked": false,
+                      "WasChecked": false
+                    }
+                  ],
+                  "animations": [
+                    {
+                      "name": "Unchecked",
+                      "useMultipleDirections": false,
+                      "directions": [
+                        {
+                          "looping": false,
+                          "timeBetweenFrames": 0.08,
+                          "sprites": [
+                            {
+                              "hasCustomCollisionMask": true,
+                              "image": "sound baru 1 1.png",
+                              "points": [],
+                              "originPoint": {
+                                "name": "origine",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "centerPoint": {
+                                "automatic": true,
+                                "name": "centre",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "customCollisionMask": [
+                                [
+                                  {
+                                    "x": 14,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 68
+                                  },
+                                  {
+                                    "x": 14,
+                                    "y": 68
+                                  }
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Checked",
+                      "useMultipleDirections": false,
+                      "directions": [
+                        {
+                          "looping": false,
+                          "timeBetweenFrames": 0.08,
+                          "sprites": [
+                            {
+                              "hasCustomCollisionMask": true,
+                              "image": "sound baru.png",
+                              "points": [],
+                              "originPoint": {
+                                "name": "origine",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "centerPoint": {
+                                "automatic": true,
+                                "name": "centre",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "customCollisionMask": [
+                                [
+                                  {
+                                    "x": 14,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 68
+                                  },
+                                  {
+                                    "x": 14,
+                                    "y": 68
+                                  }
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "objectsFolderStructure": {
+                "folderName": "__ROOT",
+                "children": [
+                  {
+                    "objectName": "State"
+                  }
+                ]
+              },
+              "objectsGroups": [],
+              "layers": [
+                {
+                  "ambientLightColorB": 200,
+                  "ambientLightColorG": 200,
+                  "ambientLightColorR": 200,
+                  "camera3DFarPlaneDistance": 10000,
+                  "camera3DFieldOfView": 45,
+                  "camera3DNearPlaneDistance": 3,
+                  "cameraType": "",
+                  "followBaseLayerCamera": false,
+                  "isLightingLayer": false,
+                  "isLocked": false,
+                  "name": "",
+                  "renderingType": "",
+                  "visibility": true,
+                  "cameras": [
+                    {
+                      "defaultSize": true,
+                      "defaultViewport": true,
+                      "height": 0,
+                      "viewportBottom": 1,
+                      "viewportLeft": 0,
+                      "viewportRight": 1,
+                      "viewportTop": 0,
+                      "width": 0
+                    }
+                  ],
+                  "effects": []
+                }
+              ],
+              "instances": [
+                {
+                  "angle": 0,
+                  "customSize": true,
+                  "depth": 0,
+                  "height": 64,
+                  "layer": "",
+                  "name": "lagu",
+                  "persistentUuid": "bda60bb1-c312-4710-baf7-ec7a3887c076",
+                  "width": 64,
+                  "x": 0,
+                  "y": 0,
+                  "zOrder": 1,
+                  "numberProperties": [],
+                  "stringProperties": [],
+                  "initialVariables": []
+                },
+                {
+                  "angle": 0,
+                  "customSize": false,
+                  "height": 0,
+                  "keepRatio": true,
+                  "layer": "",
+                  "name": "State",
+                  "persistentUuid": "817dc047-ffb3-467a-8f6b-8ea89c6566a9",
+                  "width": 0,
+                  "x": -8,
+                  "y": -2,
+                  "zOrder": 2,
+                  "numberProperties": [],
+                  "stringProperties": [],
+                  "initialVariables": []
+                }
+              ]
+            },
+            {
+              "areaMaxX": 64,
+              "areaMaxY": 64,
+              "areaMaxZ": 64,
+              "areaMinX": 0,
+              "areaMinY": 0,
+              "areaMinZ": 0,
+              "name": "bikinbaru",
+              "objects": [
+                {
+                  "adaptCollisionMaskAutomatically": true,
+                  "assetStoreId": "",
+                  "name": "State",
+                  "type": "Sprite",
+                  "updateIfNotVisible": false,
+                  "variables": [],
+                  "effects": [],
+                  "behaviors": [
+                    {
+                      "name": "ButtonFSM",
+                      "type": "SpriteToggleSwitch::ButtonFSM",
+                      "ShouldCheckHovering": true,
+                      "State": "Idle",
+                      "TouchId": 0,
+                      "TouchIsInside": false,
+                      "MouseIsInside": false,
+                      "Index": 0
+                    },
+                    {
+                      "name": "SwitchFSM",
+                      "type": "SpriteToggleSwitch::SwitchFSM",
+                      "ButtonFSM": "ButtonFSM",
+                      "IsChecked": true,
+                      "WasChecked": false
+                    }
+                  ],
+                  "animations": [
+                    {
+                      "name": "Unchecked",
+                      "useMultipleDirections": false,
+                      "directions": [
+                        {
+                          "looping": false,
+                          "timeBetweenFrames": 0.08,
+                          "sprites": [
+                            {
+                              "hasCustomCollisionMask": true,
+                              "image": "sound baru 1 1.png",
+                              "points": [],
+                              "originPoint": {
+                                "name": "origine",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "centerPoint": {
+                                "automatic": true,
+                                "name": "centre",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "customCollisionMask": [
+                                [
+                                  {
+                                    "x": 14,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 68
+                                  },
+                                  {
+                                    "x": 14,
+                                    "y": 68
+                                  }
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Checked",
+                      "useMultipleDirections": false,
+                      "directions": [
+                        {
+                          "looping": false,
+                          "timeBetweenFrames": 0.08,
+                          "sprites": [
+                            {
+                              "hasCustomCollisionMask": true,
+                              "image": "sound baru.png",
+                              "points": [],
+                              "originPoint": {
+                                "name": "origine",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "centerPoint": {
+                                "automatic": true,
+                                "name": "centre",
+                                "x": 0,
+                                "y": 0
+                              },
+                              "customCollisionMask": [
+                                [
+                                  {
+                                    "x": 14,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 5
+                                  },
+                                  {
+                                    "x": 59,
+                                    "y": 68
+                                  },
+                                  {
+                                    "x": 14,
+                                    "y": 68
+                                  }
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "objectsFolderStructure": {
+                "folderName": "__ROOT",
+                "children": [
+                  {
+                    "objectName": "State"
+                  }
+                ]
+              },
+              "objectsGroups": [],
+              "layers": [
+                {
+                  "ambientLightColorB": 200,
+                  "ambientLightColorG": 200,
+                  "ambientLightColorR": 200,
+                  "camera3DFarPlaneDistance": 10000,
+                  "camera3DFieldOfView": 45,
+                  "camera3DNearPlaneDistance": 3,
+                  "cameraType": "",
+                  "followBaseLayerCamera": false,
+                  "isLightingLayer": false,
+                  "isLocked": false,
+                  "name": "",
+                  "renderingType": "",
+                  "visibility": true,
+                  "cameras": [
+                    {
+                      "defaultSize": true,
+                      "defaultViewport": true,
+                      "height": 0,
+                      "viewportBottom": 1,
+                      "viewportLeft": 0,
+                      "viewportRight": 1,
+                      "viewportTop": 0,
+                      "width": 0
+                    }
+                  ],
+                  "effects": []
+                }
+              ],
+              "instances": [
+                {
+                  "angle": 0,
+                  "customSize": true,
+                  "depth": 0,
+                  "height": 64,
+                  "layer": "",
+                  "name": "lagu",
+                  "persistentUuid": "bda60bb1-c312-4710-baf7-ec7a3887c076",
+                  "width": 64,
+                  "x": 0,
+                  "y": 0,
+                  "zOrder": 1,
+                  "numberProperties": [],
+                  "stringProperties": [],
+                  "initialVariables": []
+                },
+                {
+                  "angle": 0,
+                  "customSize": false,
+                  "height": 0,
+                  "keepRatio": true,
+                  "layer": "",
+                  "name": "State",
+                  "persistentUuid": "54b4d301-6bb3-4e98-a512-d414ba9434f2",
+                  "width": 0,
+                  "x": -8,
+                  "y": -5,
+                  "zOrder": 2,
+                  "numberProperties": [],
+                  "stringProperties": [],
+                  "initialVariables": []
+                }
+              ]
+            },
+            {
+              "areaMaxX": 64,
+              "areaMaxY": 64,
+              "areaMaxZ": 64,
+              "areaMinX": 0,
+              "areaMinY": 0,
+              "areaMinZ": 0,
+              "name": "soundco",
+              "objects": [
+                {
+                  "adaptCollisionMaskAutomatically": true,
+                  "assetStoreId": "",
+                  "name": "State",
                   "type": "Sprite",
                   "updateIfNotVisible": false,
                   "variables": [],
@@ -76865,7 +79737,7 @@
                 "folderName": "__ROOT",
                 "children": [
                   {
-                    "objectName": "suara"
+                    "objectName": "State"
                   }
                 ]
               },
@@ -76919,17 +79791,136 @@
                 },
                 {
                   "angle": 0,
-                  "customSize": true,
-                  "depth": 1,
-                  "height": 64,
+                  "customSize": false,
+                  "height": 0,
                   "keepRatio": true,
                   "layer": "",
-                  "name": "suara",
-                  "persistentUuid": "809d4bd6-ef7a-440f-b312-0011460b2250",
+                  "name": "State",
+                  "persistentUuid": "25a206bf-6e02-4625-9d0c-13464a98f075",
+                  "width": 0,
+                  "x": -7,
+                  "y": -7,
+                  "zOrder": 2,
+                  "numberProperties": [],
+                  "stringProperties": [],
+                  "initialVariables": []
+                }
+              ]
+            },
+            {
+              "areaMaxX": 64,
+              "areaMaxY": 64,
+              "areaMaxZ": 64,
+              "areaMinX": 0,
+              "areaMinY": 0,
+              "areaMinZ": 0,
+              "name": "suara",
+              "objects": [
+                {
+                  "adaptCollisionMaskAutomatically": true,
+                  "assetStoreId": "",
+                  "name": "State",
+                  "type": "Sprite",
+                  "updateIfNotVisible": false,
+                  "variables": [],
+                  "effects": [],
+                  "behaviors": [
+                    {
+                      "name": "ButtonFSM",
+                      "type": "SpriteToggleSwitch::ButtonFSM",
+                      "ShouldCheckHovering": true,
+                      "State": "Idle",
+                      "TouchId": 0,
+                      "TouchIsInside": false,
+                      "MouseIsInside": false,
+                      "Index": 0
+                    },
+                    {
+                      "name": "SwitchFSM",
+                      "type": "SpriteToggleSwitch::SwitchFSM",
+                      "ButtonFSM": "ButtonFSM",
+                      "IsChecked": false,
+                      "WasChecked": false
+                    }
+                  ],
+                  "animations": [
+                    {
+                      "name": "Unchecked",
+                      "useMultipleDirections": false,
+                      "directions": [
+                        {
+                          "looping": false,
+                          "timeBetweenFrames": 0.08,
+                          "sprites": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Checked",
+                      "useMultipleDirections": false,
+                      "directions": [
+                        {
+                          "looping": false,
+                          "timeBetweenFrames": 0.08,
+                          "sprites": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "objectsFolderStructure": {
+                "folderName": "__ROOT",
+                "children": [
+                  {
+                    "objectName": "State"
+                  }
+                ]
+              },
+              "objectsGroups": [],
+              "layers": [
+                {
+                  "ambientLightColorB": 200,
+                  "ambientLightColorG": 200,
+                  "ambientLightColorR": 200,
+                  "camera3DFarPlaneDistance": 10000,
+                  "camera3DFieldOfView": 45,
+                  "camera3DNearPlaneDistance": 3,
+                  "cameraType": "",
+                  "followBaseLayerCamera": false,
+                  "isLightingLayer": false,
+                  "isLocked": false,
+                  "name": "",
+                  "renderingType": "",
+                  "visibility": true,
+                  "cameras": [
+                    {
+                      "defaultSize": true,
+                      "defaultViewport": true,
+                      "height": 0,
+                      "viewportBottom": 1,
+                      "viewportLeft": 0,
+                      "viewportRight": 1,
+                      "viewportTop": 0,
+                      "width": 0
+                    }
+                  ],
+                  "effects": []
+                }
+              ],
+              "instances": [
+                {
+                  "angle": 0,
+                  "customSize": true,
+                  "depth": 0,
+                  "height": 64,
+                  "layer": "",
+                  "name": "lagu",
+                  "persistentUuid": "bda60bb1-c312-4710-baf7-ec7a3887c076",
                   "width": 64,
                   "x": 0,
                   "y": 0,
-                  "zOrder": 2,
+                  "zOrder": 1,
                   "numberProperties": [],
                   "stringProperties": [],
                   "initialVariables": []
@@ -76948,7 +79939,7 @@
                 {
                   "adaptCollisionMaskAutomatically": true,
                   "assetStoreId": "",
-                  "name": "suara",
+                  "name": "State",
                   "type": "Sprite",
                   "updateIfNotVisible": false,
                   "variables": [],
@@ -77076,7 +80067,7 @@
                 "folderName": "__ROOT",
                 "children": [
                   {
-                    "objectName": "suara"
+                    "objectName": "State"
                   }
                 ]
               },
@@ -77114,16 +80105,15 @@
               "instances": [
                 {
                   "angle": 0,
-                  "customSize": true,
-                  "depth": 1,
-                  "height": 71,
+                  "customSize": false,
+                  "height": 0,
                   "keepRatio": true,
                   "layer": "",
-                  "name": "suara",
-                  "persistentUuid": "6f06ed8f-af5d-451a-b58f-34f08fe247d9",
-                  "width": 72,
-                  "x": -5,
-                  "y": -3,
+                  "name": "State",
+                  "persistentUuid": "230625d9-d9b6-4023-a39f-4980cfc35958",
+                  "width": 0,
+                  "x": -8,
+                  "y": -2,
                   "zOrder": 1,
                   "numberProperties": [],
                   "stringProperties": [],
